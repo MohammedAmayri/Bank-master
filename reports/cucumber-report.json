@@ -1,0 +1,100 @@
+[
+  {
+    "description": "When working with the bank application everything should be working to specifications",
+    "elements": [
+      {
+        "id": ";(12)",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "(12)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "That there is a bank application browser",
+            "result": {
+              "status": "passed",
+              "duration": 4327378
+            },
+            "line": 5,
+            "match": {
+              "location": "C:\\Users\\hp\\Desktop\\Bankmaster\\Bank-master\\step-definitions\\SwedenBank.js:9"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I have a account as a client",
+            "result": {
+              "status": "passed",
+              "duration": 259864
+            },
+            "line": 6,
+            "match": {
+              "location": "C:\\Users\\hp\\Desktop\\Bankmaster\\Bank-master\\step-definitions\\SwedenBank.js:13"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I log in with my informations",
+            "result": {
+              "status": "passed",
+              "duration": 11351347312
+            },
+            "line": 7,
+            "match": {
+              "location": "C:\\Users\\hp\\Desktop\\Bankmaster\\Bank-master\\step-definitions\\SwedenBank.js:16"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I choose PG payment to account number",
+            "result": {
+              "status": "passed",
+              "duration": 10458616700
+            },
+            "line": 10,
+            "match": {
+              "location": "C:\\Users\\hp\\Desktop\\Bankmaster\\Bank-master\\step-definitions\\SwedenBank.js:459"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should be able to pay the chosen sum",
+            "result": {
+              "status": "passed",
+              "duration": 2235987234
+            },
+            "line": 11,
+            "match": {
+              "location": "C:\\Users\\hp\\Desktop\\Bankmaster\\Bank-master\\step-definitions\\SwedenBank.js:493"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 1863233748
+            },
+            "hidden": true,
+            "match": {
+              "location": "C:\\Users\\hp\\Desktop\\Bankmaster\\Bank-master\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "",
+    "tags": [],
+    "uri": "C:/Users/hp/Desktop/Bankmaster/Bank-master/features/Clients.feature"
+  }
+]

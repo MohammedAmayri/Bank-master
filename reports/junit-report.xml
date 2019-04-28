@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name=";(12)" tests="5" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="C:/Users/hp/Desktop/Bankmaster/Bank-master/features/Clients.feature">
+            </property>
+        </properties>
+        <testcase name="Given That there is a bank application browser" classname=";(12)" time="0.004327378">
+        </testcase>
+        <testcase name="And I have a account as a client" classname=";(12)" time="0.000259864">
+        </testcase>
+        <testcase name="When I log in with my informations" classname=";(12)" time="11.351347312">
+        </testcase>
+        <testcase name="Given I choose PG payment to account number" classname=";(12)" time="10.4586167">
+        </testcase>
+        <testcase name="Then I should be able to pay the chosen sum" classname=";(12)" time="2.235987234">
+        </testcase>
+    </testsuite>
+</testsuites>

@@ -1,0 +1,78 @@
+.nav-link:not(.active) {
+  color: rgb(255, 255, 255);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+header { 
+  background-color: grey;
+  font-family: "Times New Roman", Times, serif;
+
+}
+title {
+  text-align: center;
+  
+}
+
+
+.nav-link.active {
+  font-weight: bold;
+  color: rgb(250, 213, 3);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.only-if-logged-in, .only-if-not-logged-in {
+  display: none;
+}
+
+a {
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+p {
+  margin-top: -0.7rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+}
+
+h3, h4, h5 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+
+}
+
+table {
+  background-color: lightblue;
+  border-bottom: 1px solid #ffff;
+}
+
+
+/* make the menu float on small devices */
+@media (max-width: 767.98px){
+
+  aside {
+    display: none;
+    position: absolute !important;
+    right: 0;
+    top: 60px;
+    width: 40vw !important;
+    z-index: 100;
+  }
+
+  aside nav {
+    border: 0px solid #fff;
+    border-radius: 0px;
+  }
+
+  aside.shown {
+    display: block;
+  }
+
+
+
+}
+
