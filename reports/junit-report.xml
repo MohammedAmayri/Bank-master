@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name=";(12)" tests="5" failures="0" skipped="0">
+    <testsuite name=";creating-an-account-with-a-name" tests="7" failures="1" skipped="1">
         <properties>
             <property name="URI" value="C:/Users/hp/Desktop/Bankmaster/Bank-master/features/Clients.feature">
             </property>
         </properties>
-        <testcase name="Given That there is a bank application browser" classname=";(12)" time="0.004327378">
+        <testcase name="Given That there is a bank application browser" classname=";creating-an-account-with-a-name" time="0.00481511">
         </testcase>
-        <testcase name="And I have a account as a client" classname=";(12)" time="0.000259864">
+        <testcase name="And I have a account as a client" classname=";creating-an-account-with-a-name" time="0.000223739">
         </testcase>
-        <testcase name="When I log in with my informations" classname=";(12)" time="11.351347312">
+        <testcase name="When I log in with my informations" classname=";creating-an-account-with-a-name" time="10.824265131">
         </testcase>
-        <testcase name="Given I choose PG payment to account number" classname=";(12)" time="10.4586167">
+        <testcase name="When i surf to my account" classname=";creating-an-account-with-a-name" time="1.083609825">
         </testcase>
-        <testcase name="Then I should be able to pay the chosen sum" classname=";(12)" time="2.235987234">
+        <testcase name="And click on LäggTill" classname=";creating-an-account-with-a-name" time="0.059642658">
+        </testcase>
+        <testcase name="And i chose to name the account mynewaccount" classname=";creating-an-account-with-a-name" time="0.113587156">
+            <failure message="WebDriverError: element not interactable">WebDriverError: element not interactable
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64)
+    at Object.checkLegacyResponse (C:\Users\hp\Desktop\Bankmaster\Bank-master\node_modules\selenium-webdriver\lib\error.js:529:15)
+    at parseHttpResponse (C:\Users\hp\Desktop\Bankmaster\Bank-master\node_modules\selenium-webdriver\lib\http.js:509:13)
+    at doSend.then.response (C:\Users\hp\Desktop\Bankmaster\Bank-master\node_modules\selenium-webdriver\lib\http.js:441:30)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+From: Task: WebElement.sendKeys()
+    at thenableWebDriverProxy.schedule (C:\Users\hp\Desktop\Bankmaster\Bank-master\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
+    at WebElement.schedule_ (C:\Users\hp\Desktop\Bankmaster\Bank-master\node_modules\selenium-webdriver\lib\webdriver.js:2015:25)
+    at WebElement.sendKeys (C:\Users\hp\Desktop\Bankmaster\Bank-master\node_modules\selenium-webdriver\lib\webdriver.js:2178:19)
+    at createWorld.&lt;anonymous&gt; (C:\Users\hp\Desktop\Bankmaster\Bank-master\step-definitions\SwedenBank.js:307:27)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+        </testcase>
+        <testcase name="Then I should be able to see the new account on the same page" classname=";creating-an-account-with-a-name">
+            <skipped message="">
+            </skipped>
         </testcase>
     </testsuite>
 </testsuites>

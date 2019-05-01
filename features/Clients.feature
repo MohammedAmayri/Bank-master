@@ -6,42 +6,70 @@ Given That there is a bank application browser
 And I have a account as a client
 When I log in with my informations
 
-Scenario: (1)
-Then I should be able to log in as a client
-And i should have 2 accounts Lönekonto with 10000 sek and sparingkonto with no balance
+Scenario: Logginig in
+When am logged in as Mohammed
+And i click on Mina konto 
+And chose to create a new account with the name SparingKonto
+Then i should be able to see my 2 accounts 
 
-Scenario: (7.1):
-Given I create an account
-Then I should be able to name the account mynewaccount
+Scenario: puting in 10K in my löneKonto
+When i surf to the simulating page 
+And i enter the right sum
+And chose Isättning 
+And submited my transaction 
+Then when on the Start page i can see the new balance of my account 
 
-Scenario: 7.2
-Given I click on the button Change account name
-Then I should be able to change the name of the account to mynewaccount2
+///didn't work
+Scenario: Creating an account with a name
+When i surf to my account
+And click on LäggTill
+And i chose to name the account mynewaccount
+Then I should be able to see the new account on the same page
 
-Scenario: 7.3
-Given I click on the button Delete the account
-Then I should be able to Delete the account
+Scenario: Changing account name
+When i am on Myaccounts page
+And click on Bytanamn
+And i chose to name the account mynewaccount2
+Then I should be able to see the new changes on the same page
 
-Scenario: (2)
-When I transfer money from lönekonto to account to sparingkonto
-Then i should be able to see that the transaction is right
+Scenario: Deleting an Account
+When  am on Myaccounts page
+And click on Tabort Konto on the side of my mynewaccount2 account
+Then I should be able to see that the account has been deleted
 
-Scenario: (5)
-Given I  clicked on the start menu after that i made five transactions 
-Then I should see my last five transactions for my accounts
 
-Scenario: (6):
-Given I am on my account page and click on the Show more button
+Scenario: Transfering money from one of my accounts to an other
+Given i have 10K in my löneKonto
+When i surf to transfermyaccount 
+And i chose the sum i want to send
+And the account that we want to recive the money as Sparingkonto
+And click on Utför to submit the transaction
+Then i should be able to see the new balance for the 2 accounts correctly
+
+Scenario: five transactions on the start page
+Given i Repeated the last scenario for 5 times 
+When i surf to my Start page 
+Then I should be able to see my last five transactions for my accounts
+
+Scenario: 10 or more transactions on my account page
+Given i repeated transaction between my accounts for 7 times more
+When  I am on my account page 
+And i click on my account Lönekonto 
+And then clicked on the Show more button
 Then I should see my last 10 transactions for my accounts
 
-Scenario: 14
-Given I choose payment over thirty thousends SEK with pg number:''
+Scenario: warninig massege when your transfer more than 30000
+Given i have enough money in my Lönekonto
+When i surf to Transfer money to another account page
+And i choose Annat Konot 
+And i choose the reciver account number
+And i a bigger sum than thirty thousends
 Then transaction should not go through and i should get a warning
 
-Scenario: (12)
-Given I choose PG payment to account number
-Then I should be able to pay the chosen sum
-
-Scenario: (3)
-Given i have already made a card withdraw
-Then I should see the result of the transaction 
+Scenario: Making a Card withdraw 
+When i Am on the simulating page 
+And i enter the 10 as sum
+And chose Uttag 
+And submit my transaction 
+When am on the Start page 
+Then i can see the new balance of my account 
