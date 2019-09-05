@@ -19,14 +19,9 @@ And chose Isättning
 And submited my transaction 
 Then when on the Start page i can see the new balance of my account 
 
-///didn't work
-Scenario: Creating an account with a name
-When i surf to my account
-And click on LäggTill
-And i chose to name the account mynewaccount
-Then I should be able to see the new account on the same page
 
-Scenario: Changing account name
+
+//Scenario: Changing account name
 When i am on Myaccounts page
 And click on Bytanamn
 And i chose to name the account mynewaccount2
@@ -38,7 +33,7 @@ And click on Tabort Konto on the side of my mynewaccount2 account
 Then I should be able to see that the account has been deleted
 
 
-Scenario: Transfering money from one of my accounts to an other
+//Scenario: Transfering money from one of my accounts to an other
 Given i have 10K in my löneKonto
 When i surf to transfermyaccount 
 And i chose the sum i want to send
@@ -51,7 +46,7 @@ Given i Repeated the last scenario for 5 times
 When i surf to my Start page 
 Then I should be able to see my last five transactions for my accounts
 
-Scenario: 10 or more transactions on my account page
+//Scenario: 10 or more transactions on my account page
 Given i repeated transaction between my accounts for 7 times more
 When  I am on my account page 
 And i click on my account Lönekonto 

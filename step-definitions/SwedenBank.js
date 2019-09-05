@@ -3,6 +3,15 @@ let money;
 let salaryAccount
 let { $, sleep,S} = require('./funcs');
 
+const ares = require('ares-helper'); // laddar in ares helper
+ares.debug = true; // vi får debug info
+ares.setProjectInfo({ // hjälpfunktion för att kunna "logga in" på ares
+  "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njc0NTMwODksImVtYWlsIjoiaS5jYW4uMjAyOC50Y2NAZ21haWwuY29tIiwiaWF0IjoxNTY3MzY2Njg5fQ.cC9lJullL9iuBAFBSUbA4xQfCcOM51vLersEYg8Q5vw",
+  "workspaceName": "JAM PROJECTS",
+  "projectKey": "5d6fe0383e47305847483f2c",
+  "projectName": "SwedenBank"
+});
+
 module.exports = function () {
 
 
@@ -30,13 +39,19 @@ module.exports = function () {
         username.submit();
         await sleep(1000);
 
-
+        
     });
 
     ;;;;;;;;;;;;;;;;
     //sc1
     this.When(/^am logged in as Mohammed$/, async function () {
         assert(driver.findElements(by.css('Inloggad som')), 'Something went wrong with your loging-in')
+        await ares.startTests(); 
+        await ares.startModule
+        ({ 
+          moduleName: 'Logging in',
+          totalTests: 1
+        });
     });
 
     this.When(/^i click on Mina konto$/, async function () {
@@ -57,6 +72,8 @@ module.exports = function () {
         balance1 = await ance.getText();
         console.log(balance1)
         assert(balance1 == 'sparingkonto', 'Are you sure that your changes are made?')
+
+      
     });
 
     this.Then(/^i should be able to see my 2 accounts$/, async function () {
@@ -69,7 +86,7 @@ module.exports = function () {
          {  
             let text=await table.getText()
              console.log(text)
-             if(text.includes('lönekonto')||text.includes('sparingkonto'))
+             if(text.includes('Lönekonto')||text.includes('sparingkonto'))
              {
                 counto++
              }
@@ -80,6 +97,16 @@ module.exports = function () {
     
         console.log(counto)
         
+        await ares.testResult({ // skicka resultatet till testrapporten
+            moduleName: 'skaffa ett nytt konto',
+            title: 'Kan jag skaffa ett nytt konto?',
+            passed: true, // HÄR skickar jag in mitt resultat ifrån t ex Selenium
+            errorMessage: 'jag kan ej skaffa nytt konto'
+          });
+          await ares.endModule({ // avslutar vi denna testrapport
+            moduleName: 'skaffa ett nytt konto',
+          });
+          await ares.endTests();
     
     });
 
@@ -94,6 +121,13 @@ module.exports = function () {
         money = 100000
         amount.sendKeys(money)
         await sleep(2000);
+        
+        await ares.startTests(); 
+        await ares.startModule
+        ({ 
+          moduleName: 'sätta in pengar',
+          totalTests: 1
+        });
     });
     this.When(/^chose Isättning$/, async function () {
         transChoice = await driver.findElement(by.xpath('//*[@id="depositOrWithdraw"]'))
@@ -112,6 +146,20 @@ module.exports = function () {
         balance = await tdWithBalance.getText();
         balance = balance.replace(/\D/g, '') / 100;
         assert(balance==money,'your transaction did not go through')
+
+        await ares.testResult({ // skicka resultatet till testrapporten
+            moduleName: 'sätta in pengar',
+            title: 'Kan jag sätta in pengar?',
+            passed: true,// HÄR skickar jag in mitt resultat ifrån t ex Selenium
+            errorMessage: 'Pengarna går ej sättas in'
+          });
+          await ares.endModule({ // avslutar vi denna testrapport
+            moduleName: 'sätta in pengar',
+          });
+          await ares.endTests();
+      
+
+
     });
     ;;;;;;;;;;;;;;;;
     //sc2
@@ -128,6 +176,13 @@ module.exports = function () {
         console.log(balance)
         await helpers.loadPage('http://localhost:3000/#transfermyaccount');
         await sleep(1000)
+
+        await ares.startTests(); 
+        await ares.startModule
+        ({ 
+          moduleName: 'överforing',
+          totalTests: 1
+        });
     });
     this.When(/^i chose the sum i want to send$/, async function () {
         amount = await driver.findElement(by.xpath('//*[@id="sum"]'))
@@ -158,6 +213,17 @@ module.exports = function () {
         console.warn("BALANCE", balance2);
         assert(balance - money == balance2, 'no can do')
         await sleep(2000)
+
+        await ares.testResult({ // skicka resultatet till testrapporten
+            moduleName: 'överforing',
+            title: 'Kan jag överfora pengar till en annan konto?',
+            passed: true, // HÄR skickar jag in mitt resultat ifrån t ex Selenium
+            errorMessage: 'det går ej att överfora pengar'
+          });
+          await ares.endModule({ // avslutar vi denna testrapport
+            moduleName: 'överforing',
+          });
+          await ares.endTests();
     });
   
     //sc3
@@ -185,6 +251,12 @@ module.exports = function () {
     this.When(/^am on the Start page$/, async function () {
         await helpers.loadPage('http://localhost:3000/#start');
         await sleep(1000);
+        await ares.startTests(); 
+        await ares.startModule
+        ({ 
+          moduleName: 'uttag',
+          totalTests: 1
+        });
     });
     this.Then(/^i can see the new balance of my account$/, async function () {
         await helpers.loadPage('http://localhost:3000/#start');
@@ -196,6 +268,17 @@ module.exports = function () {
         balance = balance.replace(/\D/g, '') / 1;
         console.log(balance,money)
         assert(balance==money,'your transaction did not go through')
+
+        await ares.testResult({ // skicka resultatet till testrapporten
+            moduleName: 'uttag',
+            title: 'kan jag ta ut pengar?',
+            passed: true , // HÄR skickar jag in mitt resultat ifrån t ex Selenium
+            errorMessage: 'det får ej att dra pengar från kontot'
+          });
+          await ares.endModule({ // avslutar vi denna testrapport
+            moduleName: 'uttag',
+          });
+          await ares.endTests();
     });
 
     //sc5
@@ -225,6 +308,14 @@ module.exports = function () {
     this.When(/^i surf to my Start page$/, async function () {
         await helpers.loadPage('http://localhost:3000/#start');
         await sleep(1000);
+        
+
+        await ares.startTests(); 
+        await ares.startModule
+        ({ 
+          moduleName: '5transactions',
+          totalTests: 1
+        });
     });
     this.Then(/^I should be able to see my last five transactions for my accounts$/, async function () {
         
@@ -241,6 +332,17 @@ module.exports = function () {
         count = tablet.match(/-10/g).length;
 
         assert(count == 5, 'we can not find your new account')
+
+        await ares.testResult({ // skicka resultatet till testrapporten
+            moduleName: '5transactions',
+            title: 'kan jag göra 5 överforningar',
+            passed: true, // HÄR skickar jag in mitt resultat ifrån t ex Selenium
+            errorMessage: 'det går ej att göra 5 eller fler transaktioner'
+          });
+          await ares.endModule({ // avslutar vi denna testrapport
+            moduleName: '5transactions',
+          });
+          await ares.endTests();
 
     });
     //sc6
@@ -279,6 +381,13 @@ module.exports = function () {
     });this.When(/^then clicked on the Show more button$/, async function () {
         let showme = await driver.findElement(by.xpath('//*[@id="show-button"]'))
         showme.click()
+        
+        await ares.startTests(); 
+        await ares.startModule
+        ({ 
+          moduleName: '10transactions',
+          totalTests: 1
+        });
 
     });
 
@@ -287,8 +396,18 @@ module.exports = function () {
         let trs = await driver.findElements(By.css('section.history table tr'));
         assert(trs.length > 10, 'cant see all the rows');
 
+        await ares.testResult({ // skicka resultatet till testrapporten
+            moduleName: '10transactions',
+            title: 'kan jag göra 10 transkationer',
+            passed: true, // HÄR skickar jag in mitt resultat ifrån t ex Selenium
+            errorMessage: 'det är ej möjligt att göra 10 transktioner'
+          });
+          await ares.endModule({ // avslutar vi denna testrapport
+            moduleName: '10transactions',
+          });
 
 
+          await ares.endTests();
     });
 
     //sc7,1
@@ -303,16 +422,38 @@ module.exports = function () {
         
     });
     this.When(/^i chose to name the account mynewaccount$/, async function () {
+        await sleep(1000)
         nameAccount=await S('newAccountName')
+        await sleep(1000)
         await nameAccount.sendKeys('mynewaccount');
         add=await driver.findElement(by.xpath('//*[@id="addAccountModal"]/div/div/div[3]/button[2]'))
         add.click()
+
+        await ares.startTests(); 
+        await ares.startModule
+        ({ 
+          moduleName: 'changeName',
+          totalTests: 1
+        });
     });
     this.Then(/^I should be able to see the new account on the same page$/, async function () {
+        await sleep(500)
         let ance = await driver.findElement(by.css('body > main > div > article > section.accounts.row.px-6 > table > tbody > tr:last-child > th > a'));
+        await sleep(500)
         let balance1 = await ance.getText();
         console.log(balance1)
         assert(balance1 == 'mynewaccount', 'Are you sure that your changes are made?')
+
+        await ares.testResult({ // skicka resultatet till testrapporten
+            moduleName: 'changeName',
+            title: 'Kan jag byta namn på mitt konto?',
+            passed:true , // HÄR skickar jag in mitt resultat ifrån t ex Selenium
+            errorMessage: 'jag kan ej byta namn på mitt konto'
+          });
+          await ares.endModule({ // avslutar vi denna testrapport
+            moduleName: 'changeName',
+          });
+          await ares.endTests();
     });
     
 
@@ -358,6 +499,13 @@ module.exports = function () {
     assert(deleteAccount, 'whats wrong?')
     deleteAccount.click()
     await sleep(2000);
+
+    await ares.startTests(); 
+        await ares.startModule
+        ({ 
+          moduleName: 'ta bort konto',
+          totalTests: 1
+        });
     });
 
 
@@ -371,7 +519,16 @@ module.exports = function () {
 
         assert(count == null, 'we can not find your new account')
 
-
+        await ares.testResult({ // skicka resultatet till testrapporten
+            moduleName: 'ta bort konto',
+            title: 'kan jag ta bort konto',
+            passed: true, // HÄR skickar jag in mitt resultat ifrån t ex Selenium
+            errorMessage: 'jag kan ej ta bort kontot!'
+          });
+          await ares.endModule({ // avslutar vi denna testrapport
+            moduleName: 'ta bort konto',
+          });
+          await ares.endTests();
     });
 
 
@@ -391,6 +548,14 @@ module.exports = function () {
         await accountChoice.sendKeys(myAccount)
         await accountChoice.submit()
 
+        await ares.startTests(); 
+        await ares.startModule
+        ({ 
+          moduleName: 'överfora till andra',
+          totalTests: 1
+        });
+
+
     }
 
     );
@@ -404,8 +569,18 @@ module.exports = function () {
         let baance1 = await tdWithBalance.getText();
         baance1 = baance1.replace(/\D/g, '') / 1; // remove all charactars that are not numbers and convert to number dividing by 1
         assert(baance1 === money, 'we can not find your new account')
+       
 
-
+        await ares.testResult({ // skicka resultatet till testrapporten
+            moduleName: 'överfora till andra',
+            title: 'kan jag överfora till andra?',
+            passed: true, // HÄR skickar jag in mitt resultat ifrån t ex Selenium
+            errorMessage: 'jag kan inte skicka pengar till de andra'
+          });
+          await ares.endModule({ // avslutar vi denna testrapport
+            moduleName: ' överfora till andra',
+          });
+          await ares.endTests();
     });
 
     //sc11.1
@@ -423,6 +598,7 @@ module.exports = function () {
         //console.log(count)
         assert(count == 3, 'we can not find your new account')
 
+        
 
     });
 
@@ -495,6 +671,13 @@ module.exports = function () {
         alert = driver.switchTo().alert()
         alert.accept();
         await sleep(2000);
+
+        await ares.startTests(); 
+        await ares.startModule
+        ({ 
+          moduleName: 'PG betalning',
+          totalTests: 1
+        });
     });
 
     this.Then(/^I should be able to pay the chosen sum$/, async function () {
@@ -512,6 +695,17 @@ module.exports = function () {
         sentBT = sentBT.replace(/\D/g, '')
         assert(sentBT == 200, 'the amount you sent has not been withdrawn')
 
+
+        await ares.testResult({ // skicka resultatet till testrapporten
+            moduleName: 'PG betalning',
+            title: 'kan jag betala med PG',
+            passed: true , // HÄR skickar jag in mitt resultat ifrån t ex Selenium
+            errorMessage: 'jag kan inte betala med PG'
+          });
+          await ares.endModule({ // avslutar vi denna testrapport
+            moduleName: 'PG betalning',
+          });
+          await ares.endTests();
     });
     //sc14
     this.Given(/^i have enough money in my Lönekonto$/, async function () {
@@ -549,687 +743,33 @@ module.exports = function () {
         
         ToAccount.submit();
         await sleep(1000);
+
+        await ares.startTests(); 
+        await ares.startModule
+        ({ 
+          moduleName: 'över gränsen',
+          totalTests: 1
+        });
+
     });
     this.Then(/^transaction should not go through and i should get a warning$/, async function () {
         let errorMessage = await driver.findElement(by.xpath('/html/body/main/div/article/form/div[4]/small'))
 
         assert(errorMessage, 'You can send more than 30000 SEK')
-    });
-    //Sc Javad
 
-    let saldoBeforeSender;
-    let saldoBeforeReceiver;
-    
-    
-    
-    this.Given(/^That there is a bank application browser$/, async function() {
-        // Write code here that turns the phrase above into concrete actions
-        await helpers.loadPage('http://localhost:3000');
-        await sleep(2000);
-    });
-
-
-    this.When(/^I log in with my credentials$/, async function() {
-    // Write code here that turns the phrase above into concrete actions
-        await driver.findElement(By.xpath("/html/body/header/button[2]/small/a")).click();
-        //let loginButton = driver.findElement(By.xpath("/html/body/header/button[2]/small/a"));
-        //loginButton.click();
-        await sleep(2000);
-
-
-        //user 1 credentials    
-        let user1 = 'javad'
-        let user1password = 'davaj1'
-
-
-        //await helpers.loadPage('http://localhost:3000/#login');
-        username = await driver.findElement(By.css("#username"))
-        username.sendKeys(user1);
-        //await sleep(2000);
-        pword = await driver.findElement(By.css("#password"))
-        pword.sendKeys(user1password);
-        //await sleep(2000);
-
-        await driver.findElement(By.css("button[type=submit]")).click();
-        //await sleep(2000);
-
-        
-
-    });
-
-    this.Then(/^I should be able to log in as a client successfully$/, async function() {
-    // Write code here that turns the phrase above into concrete actions
-        
-        await helpers.loadPage('http://localhost:3000/#start');
-        
-        let result = await driver.findElement(By.className("username")).getText();
-        assert.ok(result.includes("javad"));
-        console.log(result);
-        await sleep(2000);
-        
+        await ares.testResult({ // skicka resultatet till testrapporten
+            moduleName: 'över gränsen',
+            title: 'kan överfora mer än 30k?',
+            passed: true, // HÄR skickar jag in mitt resultat ifrån t ex Selenium
+            errorMessage: 'det här summan är över gränsen'
+          });
+          await ares.endModule({ // avslutar vi denna testrapport
+            moduleName: 'över gränsen',
+          });
+          await ares.endTests();
     });
 
   
-
-    this.Given(/^I navigate to överföringar mina konton from the side menu$/, async function () {
-        // Write code here that turns the phrase above into concrete actions
-     
-        
-        saldoBeforeSender = await driver.findElement(By.css("body > main > div > article > section.only-if-logged-in.accounts-start.row.px-2 > table > tbody > tr:nth-child(1) > td.text-right")).getText();
-        
-        saldoBeforeReceiver = await driver.findElement(By.css('body > main > div > article > section.only-if-logged-in.accounts-start.row.px-2 > table > tbody > tr:nth-child(2) > td.text-right')).getText();
-        
-        console.log("This is Sender's saldo before transaction: " + saldoBeforeSender);
-        console.log("This is Receiver's saldo before transaction " + saldoBeforeReceiver);
-
-        let transfermyAccount = await driver.findElement(By.css('body > main > div > aside > nav > ul > li:nth-child(6) > button > a'));
-        transfermyAccount.click();
-        // let val = await saldo.getAttribute('value'); // value from an input field
-        
-        //await sleep(2000);
-
-    });
-
-    this.When(/^I transfer an amount from my sender account to my other account$/, async function () {
-        // Write code here that turns the phrase above into concrete actions
-  
-        //find the elements and use them 
-        let ddElementFromAccount = await driver.findElement(By.css('#fromAccountNumber'));
-        ddElementFromAccount.click();
-        await sleep(2000);
-
-        let selectedElement1 = await driver.findElement(By.css('#fromAccountNumber > option:nth-child(1)'));
-        await sleep(2000);
-
-        let txtElementSum = await driver.findElement(By.css('#sum'));
-        txtElementSum.sendKeys('100');
-        await sleep(2000);
-
-        let ddElementToAccount = await driver.findElement(By.css('#toAccountNumber > option:nth-child(2)'));
-        ddElementToAccount.click();
-        await sleep(2000);
-
-        let txtElementMeddelande = await driver.findElement(By.xpath("//*[@id='label']"));
-        txtElementMeddelande.sendKeys('For shopping');
-        await sleep(2000);
-
-        await driver.findElement(By.css("button[type=submit]")).click();
-     
-        await sleep(2000);
-        
-    });
-
-      this.Then(/^the receiver account shall receive the amount$/, async function(){
-        // Write code here that turns the phrase above into concrete actions
-            //#2 copy #1 
-        await helpers.loadPage('http://localhost:3000/#my-accounts');
-        let saldoAfterSender = await driver.findElement(By.css('body > main > div > article > section.accounts.row.px-6 > table > tbody > tr:nth-child(1) > td.text-right')).getText();
-        let saldoAfterReceiver = await driver.findElement(By.css('body > main > div > article > section.accounts.row.px-6 > table > tbody > tr:nth-child(2) > td.text-right')).getText();
-        
-        console.log("This is sender's saldo after transaction  " + saldoAfterSender)
-        console.log("This is receivers saldo after transaction  " + saldoAfterReceiver)
-        await sleep(2000);
-
-        assert.ok(saldoAfterSender<saldoBeforeSender);
-        assert.ok(saldoBeforeReceiver<saldoAfterReceiver);
-
-         
-    });
-  
-    this.Given(/^I am logged in and navigate to Mina konton$/, async function () {
-        
-        let transfermyAccount = await driver.findElement(By.css('body > main > div > aside > nav > ul > li:nth-child(6) > button > a'));
-        transfermyAccount.click();
-
-
-    });
-    
-   
-    this.When(/^I make 11 transactions from Lönekonto to Savings$/, async function () {
-        // Write code here that turns the phrase above into concrete actions
-        
-        let i;
-        for (i = 1; i < 2; i++) {
-
-        let ddElementFromAccount = await driver.findElement(By.css('#fromAccountNumber'))
-        ddElementFromAccount.click()
-        await sleep(1000)
-
-        let selectedElement1 = await driver.findElement(By.css('#fromAccountNumber > option:nth-child(1)'))
-        await sleep(500)
-
-        let txtElementSum = await driver.findElement(By.css('#sum'))
-        txtElementSum.sendKeys('100')
-        await sleep(500)
-
-        let ddElementToAccount = await driver.findElement(By.css('#toAccountNumber > option:nth-child(2)'))
-        ddElementToAccount.click()
-        await sleep(500)
-
-        let txtElementMeddelande = await driver.findElement(By.xpath("//*[@id='label']"))
-        txtElementMeddelande.sendKeys('transaction' + i)
-        await sleep(500)
-
-        await driver.findElement(By.css("button[type=submit]")).click()
-
-        await sleep(500)
-
-        let transfermyAccount = await driver.findElement(By.css('body > main > div > aside > nav > ul > li:nth-child(6) > button > a'))
-        transfermyAccount.click();
-        
-        //console.log(i)
-        }
-
-        
-      });
-
-      
-    this.When(/^I click on Visa mer button$/, async function () {
-        // Write code here that turns the phrase above into concrete actions
-
-        await helpers.loadPage('http://localhost:3000/#my-accounts');
-        
-        let accountLF = await driver.findElement(By.css('body > main > div > article > section.accounts.row.px-6 > table > tbody > tr:nth-child(1) > th > a'))
-        accountLF.click()
-        await sleep(2000)
-
-        let showMore = await driver.findElement(By.css('#show-button'))
-        showMore.click()
-        await sleep(2000);
-    });
-
-    this.Then(/^I will see all transactions for this account$/, async function () {
-        // Write code here that turns the phrase above into concrete actions
-       
-        let xpathVisaFlerButton="//*[@id='show-button']"; 
-        let xpathTableTransactios = "//section[@class='history row px-6']//tbody/tr";
-
-        //count number of transactions before pressing visa flere
-        let tableTransactionsCount = await driver.findElements(By.xpath(xpathTableTransactios));
-        let trCountBeforePressVisaFler = tableTransactionsCount.length; 
-        console.log("dette er antal før tryk på Visa Flera " + trCountBeforePressVisaFler );
-        
-        //press Visa Flera
-        await driver.findElement(By.xpath(xpathVisaFlerButton)).click();
-        await sleep(2000);
-        
-        //count number of transactions before pressing visa flere
-        tableTransactionsCount = await driver.findElements(By.xpath(xpathTableTransactios));
-        let trCountAfterPressVisaFler = tableTransactionsCount.length;
-        
-        console.log("dette er antal efter tryk på visa fleera " + trCountAfterPressVisaFler);
-       
-        //assert that Countbefore less than countafter
-        assert.ok(trCountAfterPressVisaFler>trCountBeforePressVisaFler);
-
-        
-
-    });
-
-    this.Given(/^I am logged in$/, function () {
-        // Write code here that turns the phrase above into concrete actions
-        
-    });
-
-
-    this.When(/^I want to change account name$/, async function () {
-        // Write code here that turns the phrase above into concrete actions
-
-        let minaKontonCss = "body > main > div > aside > nav > ul > li:nth-child(4) > button > a"
-        let changeAccountNameCss = "body > main > div > article > section.accounts.row.px-6 > table > tbody > tr:nth-child(2) > td:nth-child(5) > button"
-        let changeNameInputCss = "#changeName"
-        let changeButtonCss = "#changeNameModal > div > div > div.modal-footer > button.change-account-btn.btn.btn-primary"
-
-        let minaKonton = await driver.findElement(By.css(minaKontonCss))
-        minaKonton.click()
-        await sleep(2000)
-
-        let changeAccountName = await driver.findElement(By.css(changeAccountNameCss))
-        changeAccountName.click()
-        await sleep(2000)
-
-        let changeNameInput = await driver.findElement(By.css(changeNameInputCss))
-        changeNameInput.sendKeys('car saving')
-        await sleep(2000)
-
-        let changeButton = await driver.findElement(By.css(changeButtonCss))
-        changeButton.click()
-    });
-
-    this.Then(/^the account name shall change successfully$/, async function () {
-
-        let resultCss = "/html/body/main/div/article/section[1]/table/tbody/tr[2]/th/a"
-        let result = await driver.findElement(By.xpath(resultCss)).getText();
-        assert.ok(result.includes("car saving"));
-        console.log(result);
-        await sleep(2000);
-        
-        
-      });
-
-      this.Given(/^I navigate to mina konton$/, async function () {
-        
-        let minaKontonCss = "body > main > div > aside > nav > ul > li:nth-child(4) > button > a"
-        
-        let minaKonton = await driver.findElement(By.css(minaKontonCss))
-        minaKonton.click()
-        await sleep(2000)
-        
-
-      });
-
-      this.When(/^I click on any of my accounts$/, async function () {
-        // Write code here that turns the phrase above into concrete actions
-
-        let accountLF = await driver.findElement(By.css('body > main > div > article > section.accounts.row.px-6 > table > tbody > tr:nth-child(1) > th > a'))
-        accountLF.click()
-        await sleep(2000)
-
-                
-      });
-
-      this.Then(/^I am shown my last 10 transactions for that particular account$/, async function () {
-       
-        let xpathTableRows = "//section[@class='history row px-6']//tbody/tr"
-        let tableRowCount = await driver.findElements(By.xpath(xpathTableRows))
-        let trCount = tableRowCount.length                                                      
-        console.log("Antal transaktioner: " + trCount)
-        assert.ok(trcount = 10);
-        
-
-       
-      });
-        //Ama
-        Scearion 1 code
-
-this.Given(/^That there is a bank application browser$/,async function () {
-        await helpers.loadPage('http://localhost:3000')
-    await sleep(2000)  
-    });
-    
-    this.When(/^I log in with my informations$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#login')
-        let userName = await $('//*[@id="username"]')
-        assert(userName, 'I could not find the userName')
-        user = 'pupa'
-        await userName.sendKeys(user)
-        await sleep(2000)
-       
-
-        let password = await $('//*[@id="password"]')
-        assert(password, 'I could not find the password')
-        pass = '123456'
-        await password.sendKeys(pass)
-        await sleep(2000)
-
-        userName.submit()
-        await sleep(2000)
-    
-      });
-    
-      this.Then(/^I should be able to log in as a client$/,async function () {
-        let welcome = $('/html/body/header/small/span') 
-        assert(welcome, 'You are not logged in')
-    
-      });
-Scenario 4
-
-this.Given(/^That there is a bank application browser$/,async function () {
-        await helpers.loadPage('http://localhost:3000')
-    await sleep(2000)  
-    });
-    
-    this.When(/^I log in with my informations$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#login')
-        let userName = await $('//*[@id="username"]')
-        assert(userName, 'I could not find the userName')
-        user = 'pupa'
-        await userName.sendKeys(user)
-        await sleep(1000)
-       
-
-        let password = await $('//*[@id="password"]')
-        assert(password, 'I could not find the password')
-        pass = '123456'
-        await password.sendKeys(pass)
-        await sleep(1000)
-
-        userName.submit()
-        await sleep(2000)
-    
-      });
-      this.When(/^I click on the start menu$/,async function (){
-        await helpers.loadPage('http://localhost:3000/#start')
-
-     });
-      this.Then(/^I should see my last 5 transactions for my accounts$/,async function () {
-          /*
-        let table = $('/html/body/main/div/article/section[1]/table/tbody') 
-        assert(table, 'You are not looking at the 5 last transactions')
-        let line1 = $('/html/body/main/div/article/section[1]/table/tbody/tr[1]')
-        assert(line1, 'You did not read the line 1')
-        let line2 = $('/html/body/main/div/article/section[1]/table/tbody/tr[2]')
-        assert(line2, 'You did not read the line 2')
-        let line3 = $('/html/body/main/div/article/section[1]/table/tbody/tr[3]')
-        assert(line3, 'You did not read the line 3')
-        let line4 = $('/html/body/main/div/article/section[1]/table/tbody/tr[4]')
-        assert(line4, 'You did not read the line 4')
-        let line5 = $('/html/body/main/div/article/section[1]/table/tbody/tr[5]')
-        assert(line5, 'You did not read the line 5')*/
-
-        /* expect 6 trs (the header + 5 transactions)
-        let trs = await driver.findElements(By.css('section.start-history table tr'));
-        assert.equal(trs.length, 6, 'Not five lines in transactions!');
-        */
-      });
-      this.When(/^I transfer money from an account to an other$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#my-accounts')
-        await sleep(2000)
-        //let kontosumTd = await $('/html/body/main/div/article/section[1]/table/tbody/tr[1]/td[2]')
-        let kontoSumTd = await driver.findElement(By.css('section.accounts table tbody tr:first-child td:nth-child(3)'));
-        let kontoSum = await kontoSumTd.getText();
-        kontoSum = kontoSum.replace(/\D/g, '') / 100;
-        console.log("KONTOSUM",kontoSum);
-        
-        await helpers.loadPage('http://localhost:3000/#transfermyaccount')
-        //let konto1 = await $('//*[@id="fromAccountNumber"]')
-        await sleep(2000)
-        let summa1 = 5
-        await sleep(2000)
-        
-
-        let choosensum = await $('//*[@id="sum"]')
-        await choosensum.sendKeys(summa1) 
-        await sleep(2000)
-        
-        //await konto1.click()
-        //let toAccountSelector = await $('//*[@id="toAccountNumber"]');
-        let optionSemester = driver.findElement(by.css('#toAccountNumber option:last-child'));
-        await optionSemester.click();
-
-        
-
-        await sleep(2000)
-
-        let submitButton = await driver.findElement(by.css('.transferme-form button[type="submit"]'));
-        await submitButton.click();
-        await sleep(2000)
-        
-        
-        await helpers.loadPage('http://localhost:3000/#my-accounts')
-        await sleep(1000)
-        
-        let kontoSumTd1 = await driver.findElement(By.css('section.accounts table tbody tr:first-child td:nth-child(3)'));
-        let kontoSum1 = await kontoSumTd1.getText();
-        kontoSum1 = kontoSum1.replace(/\D/g, '') / 100;
-        console.log("KONTOSUM",kontoSum1);
-        let resultTransfer= kontoSum - kontoSum1
-        console.log('You transfered ' + resultTransfer + ' SEK from your account')
-        
-
-      });
-      this.Then(/^I should see that there is money on my new account$/, async function () {
-        await helpers.loadPage('http://localhost:3000/#strart')
-        let line1 = $('/html/body/main/div/article/section[1]/table/tbody/tr[1]/th[1]')
-        assert(line1, 'You did get a payment between your account')
-        
-      });
-     
-
-
-
-Sceario 5
-
-this.Given(/^That there is a bank application browser$/,async function () {
-        await helpers.loadPage('http://localhost:3000')
-    await sleep(2000)  
-    });
-    
-    this.When(/^I log in with my informations$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#login')
-        let userName = await $('//*[@id="username"]')
-        assert(userName, 'I could not find the userName')
-        user = 'pupa'
-        await userName.sendKeys(user)
-        await sleep(1000)
-       
-
-        let password = await $('//*[@id="password"]')
-        assert(password, 'I could not find the password')
-        pass = '123456'
-        await password.sendKeys(pass)
-        await sleep(1000)
-
-        userName.submit()
-        await sleep(2000)
-    
-      });
-      this.When(/^I click on the start menu$/,async function (){
-        await helpers.loadPage('http://localhost:3000/#start')
-
-     });
-      this.Then(/^I should see my last 5 transactions for my accounts$/,async function () {
-        let table = $('/html/body/main/div/article/section[1]/table/tbody') 
-        assert(table, 'You are not looking at the 5 last transactions')
-        let line1 = $('/html/body/main/div/article/section[1]/table/tbody/tr[1]')
-        assert(line1, 'You did not read the line 1')
-        let line2 = $('/html/body/main/div/article/section[1]/table/tbody/tr[2]')
-        assert(line2, 'You did not read the line 2')
-        let line3 = $('/html/body/main/div/article/section[1]/table/tbody/tr[3]')
-        assert(line3, 'You did not read the line 3')
-        let line4 = $('/html/body/main/div/article/section[1]/table/tbody/tr[4]')
-        assert(line4, 'You did not read the line 4')
-        let line5 = $('/html/body/main/div/article/section[1]/table/tbody/tr[5]')
-        assert(line5, 'You did not read the line 5')
-      });
-      
-alternative solutions:
-// expect 6 trs (the header + 5 transactions)
-       let trs = await driver.findElements(By.css('section.start-history table tr'));
-       assert.equal(trs.length, 10, 'Not five lines in transactions!');
-
-scenario 6
-
-  this.When(/^I click on the "Show more" button$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#my-accounts')
-        await sleep(1000)
-        let choosenAccount = await $ ('/html/body/main/div/article/section[1]/table/tbody/tr[1]/th/a')
-        choosenAccount.click()
-        await sleep(1000);
-        let showButton = await $ ('//*[@id="show-button"]')
-        showButton.click()
-        await sleep(3000);
-      });
-      this.Then(/^I will see all the transactions for each account$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#account-details')
-        await sleep(3000)
-      });
-
-Scenario 7.1
-
-this.When(/^I create an account$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#my-accounts')
-        await sleep(1000)
-        let choosenName = await $ ('/html/body/main/div/article/section[2]/button')
-        choosenName.click()
-        await sleep(1000);
-        let accounttype = await $ ('//*[@id="newAccountName"]')
-        let accountName = 'Bilkonto1'
-        await accounttype.sendKeys(accountName)
-        let saveAccount = await $ ('/html/body/main/div/article/div[1]/div/div/div[3]/button[2]')
-        await sleep(1000)
-        saveAccount.click()
-        await sleep(2000)
-      });
-      
-
-       this.Then(/^I should be able to create a name for the account$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#my-accounts')
-        await sleep(3000)
-       });
-
-Scenario 7.2
-
- this.When(/^I click on the button "Change account name"$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#my-accounts')
-        await sleep(1000)
-        let choosenName2 = await $ ('/html/body/main/div/article/section[1]/table/tbody/tr[3]/td[4]/button')
-        choosenName2.click()
-        await sleep(1000);
-        let accounttype2 = await $ ('//*[@id="changeName"]')
-        let accountName2 = 'Bilkonto2'
-        await accounttype2.sendKeys(accountName2)
-        await sleep(1000)
-        let saveAccount2 = await $ ('/html/body/main/div/article/div[2]/div/div/div[3]/button[2]')
-        await sleep(1000)
-        saveAccount2.click()
-        await sleep(2000)
-
-      });
-      
-
-       this.Then(/^I should be able to change the name of the account$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#my-accounts')
-        await sleep(3000)
-       });
-
-Scenario 7.3
-
-this.When(/^I click on the button "Delete the account"$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#my-accounts')
-        await sleep(1000)
-        let choosenName3 = await $ ('/html/body/main/div/article/section[1]/table/tbody/tr[3]/td[3]/button')
-        choosenName3.click()
-        await sleep(1000);
-        
-      });
-      
-       this.Then(/^I should be able to Delete the account$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#my-accounts')
-        await sleep(3000)
-       });
-
-Scenario8
-
-        Sceanrio 7.1+7.2
-
-Scenario 9
-
- this.When(/^I click on the mina konto$/,async function (){
-        
-        await helpers.loadPage('http://localhost:3000/#my-accounts')
-        await sleep(1000) 
-        let kontonValue1 = await driver.findElement(by.css('html body main.container-fluid.mt-4 div.row article.col-12.col-md-8 section.accounts.row.px-6 table.table.table-striped.col-12 tbody tr td.text-right'))
-        kontoSum1 = await kontonValue1.getText();
-        kontoSum1 = kontoSum1.replace(/\D/g, '') / 100;
-        console.log("KONTOSUM",kontoSum1)
-     });
-     
-     this.When(/^I click on the button 'Transfer to other'$/,async function ()
-     {
-        await helpers.loadPage('http://localhost:3000/#transfer')
-        await sleep(3000)
-        let paymantMethod1 = await $('/html/body/main/div/article/form/div[2]/fieldset/label[3]/input')
-        await paymantMethod1.click()
-        await sleep(1000) 
-            });
-
-
-
-       this.When(/^^I enter "([^"]*)" SEK in summa$$/,async function (arg1) {        
-        
-        
-        let summatyp1 = await $('//*[@id="sum"]')
-        await sleep(1000)
-        payment = 5
-        await summatyp1.sendKeys(arg1) 
-
-       });
-       let kontoSum1
-       this.When(/^I enter account number "([^"]*)"$/,async function (arg1) {
-        let paymantMethod2 = await $('//*[@id="toAccountNumber"]')
-        await sleep(1000) 
-        let kontoNumber2 = '5555-4444'
-        await paymantMethod2.click(arg1)
-        await paymantMethod2.sendKeys(arg1)
-        await sleep(1000) 
-        let validationButton = await $('/html/body/main/div/article/form/button')
-        await validationButton.click()
-        let alert = driver.switchTo().alert()
-        alert.accept()
-        await sleep(1000)
-        //let cancellation = alert.dismiss()
-        
-      });
-      this.Then(/^should be able to able to see my Transfer$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#my-accounts')
-        await sleep(1000) 
-        let kontonValue2 = await driver.findElement(by.css('html body main.container-fluid.mt-4 div.row article.col-12.col-md-8 section.accounts.row.px-6 table.table.table-striped.col-12 tbody tr td.text-right'))
-        let kontoSum2 = await kontonValue2.getText();
-        kontoSum2 = kontoSum2.replace(/\D/g, '') / 100;
-        console.log("KONTOSUM",kontoSum2)
-        let transferAmout = kontoSum1 - kontoSum2
-        console.log('You transfered '+ transferAmout +' SEK from your account') 
-      });
-
-Scenario 9
-
-this.When(/^I am on start page$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#start')
-        await sleep(2000)
-      });
-
-      this.Then(/^I can see my last 5 transactions$/,async function () {
-        let table = await $('/html/body/main/div/article/section[1]/table/tbody') 
-        assert(table, 'You are not looking at the 5 last transactions')
-        let line1 = await $('/html/body/main/div/article/section[1]/table/tbody/tr[1]')
-        assert(line1, 'You did not read the line 1')
-        let line2 = await $('/html/body/main/div/article/section[1]/table/tbody/tr[2]')
-        assert(line2, 'You did not read the line 2')
-        let line3 = await $('/html/body/main/div/article/section[1]/table/tbody/tr[3]')
-        assert(line3, 'You did not read the line 3')
-        let line4 = await $('/html/body/main/div/article/section[1]/table/tbody/tr[4]')
-        assert(line4, 'You did not read the line 4')
-        let line5 = await $('/html/body/main/div/article/section[1]/table/tbody/tr[5]')
-        assert(line5, 'You did not read the line 5')
-      });
-      
-      this.Then(/^I can see the summary of the accounts balance$/,async function (){
-         let kontoValue1 = await driver.findElement(by.css('html body main.container-fluid.mt-4 div.row article.col-12.col-md-8 section.only-if-logged-in.accounts-start.row.px-2 table.table.table-striped.col-12 tbody tr td.text-right'))
-         let kontoValue2 = await driver.findElement(by.css ('html body main.container-fluid.mt-4 div.row article.col-12.col-md-8 section.only-if-logged-in.accounts-start.row.px-2 table.table.table-striped.col-12 tbody tr td.text-right'))
-         let kontoSum1 = await kontoValue1.getText();
-         let kontoSum2 = await kontoValue2.getText();
-        kontoSum1 = kontoSum1.replace(/\D/g, '') / 100;
-        kontoSum2 = kontoSum2.replace(/\D/g, '') / 100;
-        console.log("KONTOSUM",kontoSum1)
-        console.log("KONTOSUM",kontoSum2)
-        let sumAccount = kontoSum1 + kontoSum2
-        console.log('The sum of you account is ' + sumAccount + ' SEK')
-       });
-
-scenario 14
-
- this.When(/^I choose payment over 30000 SEK$/,async function () {
-        await helpers.loadPage('http://localhost:3000/#transfer')
-        let paymentMethods = await $('/html/body/main/div/article/form/div[2]/fieldset/label[3]/input')
-        await sleep(2000)
-        await paymentMethods.click()
-        let kontonummer = 656895
-        let kontotyp = await $('//*[@id="toAccountNumber"]')
-        await kontotyp.sendKeys(kontonummer)
-        await sleep(1000)
-        let summa = 35000
-        let summatyp = await $('//*[@id="sum"]')
-        await summatyp.sendKeys(summa)
-        await sleep(2000)
-        summatyp.submit()
-        await sleep(2000)
-      });
-
-      this.Then(/^I should not be able to pay the choosen amount and I get a message$/,async function () {
-       let errorMessage = await $ ('/html/body/main/div/article/form/div[4]/small')
-       assert(errorMessage, 'You can send more than 30000 SEK')
-      });
 
 
 }
