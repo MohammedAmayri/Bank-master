@@ -6,6 +6,7 @@ Given That there is a bank application browser
 And I have a account as a client
 When I log in with my informations
 
+
 Scenario: Logginig in
 When am logged in as Mohammed
 And i click on Mina konto 
@@ -21,11 +22,7 @@ Then when on the Start page i can see the new balance of my account
 
 
 
-//Scenario: Changing account name
-When i am on Myaccounts page
-And click on Bytanamn
-And i chose to name the account mynewaccount2
-Then I should be able to see the new changes on the same page
+
 
 Scenario: Deleting an Account
 When  am on Myaccounts page
@@ -33,7 +30,7 @@ And click on Tabort Konto on the side of my mynewaccount2 account
 Then I should be able to see that the account has been deleted
 
 
-//Scenario: Transfering money from one of my accounts to an other
+Scenario: Transfering money from one of my accounts to an other
 Given i have 10K in my löneKonto
 When i surf to transfermyaccount 
 And i chose the sum i want to send
@@ -46,7 +43,7 @@ Given i Repeated the last scenario for 5 times
 When i surf to my Start page 
 Then I should be able to see my last five transactions for my accounts
 
-//Scenario: 10 or more transactions on my account page
+Scenario: 10 or more transactions on my account page
 Given i repeated transaction between my accounts for 7 times more
 When  I am on my account page 
 And i click on my account Lönekonto 

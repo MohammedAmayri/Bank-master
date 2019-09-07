@@ -14,9 +14,11 @@ ares.setProjectInfo({ // hjälpfunktion för att kunna "logga in" på ares
 
 module.exports = function () {
 
-
+    
+    
     this.Given(/^That there is a bank application browser$/, async function () {
         //bothing to test
+        
     });
 
     this.Given(/^I have a account as a client$/, async function () {
@@ -46,7 +48,7 @@ module.exports = function () {
     //sc1
     this.When(/^am logged in as Mohammed$/, async function () {
         assert(driver.findElements(by.css('Inloggad som')), 'Something went wrong with your loging-in')
-        await ares.startTests(); 
+        await ares.startTests();
         await ares.startModule
         ({ 
           moduleName: 'Logging in',
@@ -106,13 +108,14 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'skaffa ett nytt konto',
           });
+            
           await ares.endTests();
-    
     });
 
     this.When(/^i surf to the simulating page$/, async function () {
         await helpers.loadPage('http://localhost:3000/#simulate');
         await sleep(1000);
+        await ares.startTests();
 
     });
     this.When(/^i enter the right sum$/, async function () {
@@ -122,7 +125,7 @@ module.exports = function () {
         amount.sendKeys(money)
         await sleep(2000);
         
-        await ares.startTests(); 
+        
         await ares.startModule
         ({ 
           moduleName: 'sätta in pengar',
@@ -156,6 +159,7 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'sätta in pengar',
           });
+
           await ares.endTests();
       
 
@@ -166,6 +170,7 @@ module.exports = function () {
     
     this.Given(/^i have 10K in my löneKonto$/, async function () {
         //already tested
+        await ares.startTests();
     });
     this.When(/^i surf to transfermyaccount$/, async function () {
         await helpers.loadPage('http://localhost:3000/#start');
@@ -177,7 +182,7 @@ module.exports = function () {
         await helpers.loadPage('http://localhost:3000/#transfermyaccount');
         await sleep(1000)
 
-        await ares.startTests(); 
+         
         await ares.startModule
         ({ 
           moduleName: 'överforing',
@@ -251,7 +256,7 @@ module.exports = function () {
     this.When(/^am on the Start page$/, async function () {
         await helpers.loadPage('http://localhost:3000/#start');
         await sleep(1000);
-        await ares.startTests(); 
+         
         await ares.startModule
         ({ 
           moduleName: 'uttag',
@@ -310,7 +315,7 @@ module.exports = function () {
         await sleep(1000);
         
 
-        await ares.startTests(); 
+         
         await ares.startModule
         ({ 
           moduleName: '5transactions',
@@ -382,7 +387,7 @@ module.exports = function () {
         let showme = await driver.findElement(by.xpath('//*[@id="show-button"]'))
         showme.click()
         
-        await ares.startTests(); 
+         
         await ares.startModule
         ({ 
           moduleName: '10transactions',
@@ -405,9 +410,9 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: '10transactions',
           });
-
-
           await ares.endTests();
+
+            
     });
 
     //sc7,1
@@ -429,7 +434,7 @@ module.exports = function () {
         add=await driver.findElement(by.xpath('//*[@id="addAccountModal"]/div/div/div[3]/button[2]'))
         add.click()
 
-        await ares.startTests(); 
+         
         await ares.startModule
         ({ 
           moduleName: 'changeName',
@@ -464,7 +469,9 @@ module.exports = function () {
         await sleep(1000);
     });
     this.When(/^click on Bytanamn$/, async function () {
-        ChangeName = await driver.findElement(by.xpath('/html/body/main/div/article/section[1]/table/tbody/tr[3]/td[4]/button'))
+        await sleep(500)
+        ChangeName = await driver.findElement(by.xpath('/html/body/main/div/article/section[1]/table/tbody/tr/td[4]/button'))
+        await sleep(500)
         assert(ChangeName, 'whats wrong?')
         ChangeName.click()
         await sleep(2000);
@@ -495,12 +502,12 @@ module.exports = function () {
     );
     this.When(/^click on Tabort Konto on the side of my mynewaccount2 account$/, async function () {
         
-    deleteAccount = await driver.findElement(by.xpath('/html/body/main/div/article/section[1]/table/tbody/tr[3]/td[3]/button'))
+    deleteAccount = await driver.findElement(by.xpath('/html/body/main/div/article/section[1]/table/tbody/tr/td[3]/button'))
     assert(deleteAccount, 'whats wrong?')
     deleteAccount.click()
     await sleep(2000);
 
-    await ares.startTests(); 
+     
         await ares.startModule
         ({ 
           moduleName: 'ta bort konto',
@@ -548,7 +555,7 @@ module.exports = function () {
         await accountChoice.sendKeys(myAccount)
         await accountChoice.submit()
 
-        await ares.startTests(); 
+         
         await ares.startModule
         ({ 
           moduleName: 'överfora till andra',
@@ -640,7 +647,7 @@ module.exports = function () {
 
     //sc12
     this.Given(/^I choose PG payment to account number$/, async function () {
-
+        await ares.startTests()
         await helpers.loadPage('http://localhost:3000/#start');
         await sleep(2000);
 
@@ -672,7 +679,7 @@ module.exports = function () {
         alert.accept();
         await sleep(2000);
 
-        await ares.startTests(); 
+         
         await ares.startModule
         ({ 
           moduleName: 'PG betalning',
@@ -712,12 +719,13 @@ module.exports = function () {
         await helpers.loadPage('http://localhost:3000/#start');
         await sleep(2000);
         tdWithBalance = await driver.findElement(by.xpath('/html/body/main/div/article/section[2]/table/tbody/tr[1]/td[2]'));
-        
+        await ares.startTests()
          balance2 = await tdWithBalance.getText();
         balance2 = balance2.replace(/\D/g, '') / 100; // remove all charactars that are not numbers and convert to number dividing by 1
         console.log(balance, money, balance2)
         console.warn("BALANCE", balance2);
         assert(balance2>30000, 'No enough money')
+        
     });
 
     this.When(/^i surf to Transfer money to another account page$/, async function () {
@@ -744,13 +752,13 @@ module.exports = function () {
         ToAccount.submit();
         await sleep(1000);
 
-        await ares.startTests(); 
+         
         await ares.startModule
         ({ 
           moduleName: 'över gränsen',
           totalTests: 1
         });
-
+        
     });
     this.Then(/^transaction should not go through and i should get a warning$/, async function () {
         let errorMessage = await driver.findElement(by.xpath('/html/body/main/div/article/form/div[4]/small'))
