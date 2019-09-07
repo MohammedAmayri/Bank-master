@@ -1,102 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name=";logginig-in" tests="7" failures="1" skipped="0">
+    <testsuite name=";logging-in" tests="6" failures="1" skipped="0">
         <properties>
-            <property name="URI" value="C:/Users/zarak/Documents/GitHub/Bank-master/features/Clients.feature">
+            <property name="URI" value="C:/Users/javad/Desktop/Bank-master/features/Clients.feature">
             </property>
         </properties>
-        <testcase name="Given That there is a bank application browser" classname=";logginig-in" time="0.005396335">
+        <testcase name="Given I navigate to Sweden Bank website" classname=";logging-in" time="4.682679349">
         </testcase>
-        <testcase name="And I have a account as a client" classname=";logginig-in" time="0.000358046">
+        <testcase name="When I log in with my information" classname=";logging-in" time="3.249595094">
         </testcase>
-        <testcase name="When I log in with my informations" classname=";logginig-in" time="10.452290904">
+        <testcase name="And am logged in as a customer" classname=";logging-in" time="0.000436906">
         </testcase>
-        <testcase name="When am logged in as Mohammed" classname=";logginig-in" time="1.707231859">
+        <testcase name="And i click on Mina konto" classname=";logging-in" time="1.046105534">
         </testcase>
-        <testcase name="And i click on Mina konto" classname=";logginig-in" time="1.329611982">
+        <testcase name="And chose to create a new account with the name SparingKonto" classname=";logging-in" time="2.260211683">
         </testcase>
-        <testcase name="And chose to create a new account with the name SparingKonto" classname=";logginig-in" time="2.63218586">
-        </testcase>
-        <testcase name="Then i should be able to see my 2 accounts" classname=";logginig-in" time="1.867375304">
+        <testcase name="Then i should be able to see my 2 accounts" classname=";logging-in" time="1.213901349">
             <failure message="AssertionError: we can not find your new account">AssertionError: we can not find your new account
-    at createWorld.&lt;anonymous&gt; (C:\Users\zarak\Documents\GitHub\Bank-master\step-definitions\SwedenBank.js:96:9)
+    at createWorld.&lt;anonymous&gt; (C:\Users\javad\Desktop\Bank-master\step-definitions\SwedenBank.js:105:9)
     at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
         </testcase>
     </testsuite>
-    <testsuite name=";puting-in-10k-in-my-lönekonto" tests="8" failures="1" skipped="3">
+    <testsuite name=";puting-in-100k-in-my-lönekonto" tests="7" failures="1" skipped="0">
         <properties>
-            <property name="URI" value="C:/Users/zarak/Documents/GitHub/Bank-master/features/Clients.feature">
+            <property name="URI" value="C:/Users/javad/Desktop/Bank-master/features/Clients.feature">
             </property>
         </properties>
-        <testcase name="Given That there is a bank application browser" classname=";puting-in-10k-in-my-lönekonto" time="0.000638635">
+        <testcase name="Given I navigate to Sweden Bank website1" classname=";puting-in-100k-in-my-lönekonto" time="3.836053282">
         </testcase>
-        <testcase name="And I have a account as a client" classname=";puting-in-10k-in-my-lönekonto" time="0.00019749">
+        <testcase name="And I log in with my information1" classname=";puting-in-100k-in-my-lönekonto" time="3.213978718">
         </testcase>
-        <testcase name="When I log in with my informations" classname=";puting-in-10k-in-my-lönekonto" time="11.883621763">
+        <testcase name="When i surf to the simulating page" classname=";puting-in-100k-in-my-lönekonto" time="1.123923735">
         </testcase>
-        <testcase name="When i surf to the simulating page" classname=";puting-in-10k-in-my-lönekonto" time="1.133858364">
+        <testcase name="And i enter the right sum" classname=";puting-in-100k-in-my-lönekonto" time="2.042339495">
         </testcase>
-        <testcase name="And i enter the right sum" classname=";puting-in-10k-in-my-lönekonto" time="2.707184154">
-            <failure message="TypeError: Cannot read property &apos;0&apos; of undefined">TypeError: Cannot read property &apos;0&apos; of undefined
-    at Function.startTests (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\ares-helper\index.js:104:41)
+        <testcase name="And chose Isättning" classname=";puting-in-100k-in-my-lönekonto" time="0.039339749">
+        </testcase>
+        <testcase name="And submited my transaction" classname=";puting-in-100k-in-my-lönekonto" time="0.000589369">
+        </testcase>
+        <testcase name="Then when on the Start page i can see the new balance of my account" classname=";puting-in-100k-in-my-lönekonto" time="1.305945734">
+            <failure message="AssertionError: your transaction did not go through">AssertionError: your transaction did not go through
+    at createWorld.&lt;anonymous&gt; (C:\Users\javad\Desktop\Bank-master\step-definitions\SwedenBank.js:190:9)
     at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
         </testcase>
-        <testcase name="And chose Isättning" classname=";puting-in-10k-in-my-lönekonto">
-            <skipped message="">
-            </skipped>
-        </testcase>
-        <testcase name="And submited my transaction" classname=";puting-in-10k-in-my-lönekonto">
-            <skipped message="">
-            </skipped>
-        </testcase>
-        <testcase name="Then when on the Start page i can see the new balance of my account" classname=";puting-in-10k-in-my-lönekonto">
-            <skipped message="">
-            </skipped>
-        </testcase>
     </testsuite>
-    <testsuite name=";changing-account-name" tests="7" failures="0" skipped="0">
+    <testsuite name=";i-transfer-between-my-accounts" tests="4" failures="0" skipped="0">
         <properties>
-            <property name="URI" value="C:/Users/zarak/Documents/GitHub/Bank-master/features/Clients.feature">
+            <property name="URI" value="C:/Users/javad/Desktop/Bank-master/features/Clients.feature">
             </property>
         </properties>
-        <testcase name="Given That there is a bank application browser" classname=";changing-account-name" time="0.000489877">
+        <testcase name="Given I log into my account" classname=";i-transfer-between-my-accounts" time="7.208241482">
         </testcase>
-        <testcase name="And I have a account as a client" classname=";changing-account-name" time="0.000162608">
+        <testcase name="When i click on Överföringar mina konton" classname=";i-transfer-between-my-accounts" time="2.76702042">
         </testcase>
-        <testcase name="When I log in with my informations" classname=";changing-account-name" time="10.23764806">
+        <testcase name="And i transfer 100 kr to my other account Sparingkonto" classname=";i-transfer-between-my-accounts" time="1.131410871">
         </testcase>
-        <testcase name="When i am on Myaccounts page" classname=";changing-account-name" time="1.178157562">
-        </testcase>
-        <testcase name="And click on Bytanamn" classname=";changing-account-name" time="2.03732192">
-        </testcase>
-        <testcase name="And i chose to name the account mynewaccount2" classname=";changing-account-name" time="0.31900654">
-        </testcase>
-        <testcase name="Then I should be able to see the new changes on the same page" classname=";changing-account-name" time="0.263877226">
+        <testcase name="Then i should be able to see a correct new balance for both accounts" classname=";i-transfer-between-my-accounts" time="5.877400068">
         </testcase>
     </testsuite>
-    <testsuite name=";deleting-an-account" tests="6" failures="1" skipped="3">
+    <testsuite name=";i-withdraw-cash-from-atm" tests="4" failures="1" skipped="0">
         <properties>
-            <property name="URI" value="C:/Users/zarak/Documents/GitHub/Bank-master/features/Clients.feature">
+            <property name="URI" value="C:/Users/javad/Desktop/Bank-master/features/Clients.feature">
             </property>
         </properties>
-        <testcase name="Given That there is a bank application browser" classname=";deleting-an-account" time="0.000455508">
+        <testcase name="Given I am logged in as a bank customer" classname=";i-withdraw-cash-from-atm" time="7.306073165">
         </testcase>
-        <testcase name="And I have a account as a client" classname=";deleting-an-account" time="0.000198515">
+        <testcase name="When I visit the simulation page" classname=";i-withdraw-cash-from-atm" time="1.068985075">
         </testcase>
-        <testcase name="When I log in with my informations" classname=";deleting-an-account" time="5.944188962">
-            <failure message="CancellationError: There was an uncaught error in the control flow: WebDriverError: unknown error: failed to change window state to normal, current state is maximized">CancellationError: There was an uncaught error in the control flow: WebDriverError: unknown error: failed to change window state to normal, current state is maximized
+        <testcase name="And i make a 200 kr cash withdrawal" classname=";i-withdraw-cash-from-atm" time="2.054084758">
+        </testcase>
+        <testcase name="Then I navigate to my online account and here I can see the new balance" classname=";i-withdraw-cash-from-atm" time="0.072145817">
+            <failure message="CancellationError: There was an uncaught error in the control flow: StaleElementReferenceError: stale element reference: element is not attached to the page document">CancellationError: There was an uncaught error in the control flow: StaleElementReferenceError: stale element reference: element is not attached to the page document
   (Session info: chrome=76.0.3809.132)
   (Driver info: chromedriver=76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}),platform=Windows NT 10.0.17134 x86_64)
-    at Function.wrap (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:757:14)
-    at ManagedPromise.cancel (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:1273:38)
-    at TaskQueue.abort_ (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:3021:34)
-    at ControlFlow.cancelQueues_ (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:2651:11)
-    at ControlFlow.onQueueError_ (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:2626:10)
-    at TaskQueue.emit (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\events.js:62:21)
-    at TaskQueue.abort_ (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:3026:12)
-    at TaskQueue.processUnhandledRejections_ (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:3124:12)
-    at TaskQueue.executeNext_ (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:3037:40)
-    at asyncRun (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:2935:27)</failure>
+    at Function.wrap (C:\Users\javad\Desktop\Bank-master\node_modules\selenium-webdriver\lib\promise.js:757:14)
+    at ManagedPromise.cancel (C:\Users\javad\Desktop\Bank-master\node_modules\selenium-webdriver\lib\promise.js:1273:38)
+    at TaskQueue.abort_ (C:\Users\javad\Desktop\Bank-master\node_modules\selenium-webdriver\lib\promise.js:3021:34)
+    at ControlFlow.cancelQueues_ (C:\Users\javad\Desktop\Bank-master\node_modules\selenium-webdriver\lib\promise.js:2651:11)
+    at ControlFlow.onQueueError_ (C:\Users\javad\Desktop\Bank-master\node_modules\selenium-webdriver\lib\promise.js:2626:10)
+    at TaskQueue.emit (C:\Users\javad\Desktop\Bank-master\node_modules\selenium-webdriver\lib\events.js:62:21)
+    at TaskQueue.abort_ (C:\Users\javad\Desktop\Bank-master\node_modules\selenium-webdriver\lib\promise.js:3026:12)
+    at TaskQueue.processUnhandledRejections_ (C:\Users\javad\Desktop\Bank-master\node_modules\selenium-webdriver\lib\promise.js:3124:12)
+    at TaskQueue.executeNext_ (C:\Users\javad\Desktop\Bank-master\node_modules\selenium-webdriver\lib\promise.js:3037:40)
+    at asyncRun (C:\Users\javad\Desktop\Bank-master\node_modules\selenium-webdriver\lib\promise.js:2935:27)</failure>
+        </testcase>
+    </testsuite>
+    <testsuite name=";changing-account-name" tests="5" failures="0" skipped="4">
+        <properties>
+            <property name="URI" value="C:/Users/javad/Desktop/Bank-master/features/Clients.feature">
+            </property>
+        </properties>
+        <testcase name="Given I have a account as a client" classname=";changing-account-name">
+        </testcase>
+        <testcase name="When i am on Myaccounts page" classname=";changing-account-name">
+            <skipped message="">
+            </skipped>
+        </testcase>
+        <testcase name="And click on Bytanamn" classname=";changing-account-name">
+            <skipped message="">
+            </skipped>
+        </testcase>
+        <testcase name="And i chose to name the account mynewaccount2" classname=";changing-account-name">
+            <skipped message="">
+            </skipped>
+        </testcase>
+        <testcase name="Then I should be able to see the new changes on the same page" classname=";changing-account-name">
+            <skipped message="">
+            </skipped>
+        </testcase>
+    </testsuite>
+    <testsuite name=";deleting-an-account" tests="4" failures="0" skipped="3">
+        <properties>
+            <property name="URI" value="C:/Users/javad/Desktop/Bank-master/features/Clients.feature">
+            </property>
+        </properties>
+        <testcase name="Given I have a account as a client" classname=";deleting-an-account">
         </testcase>
         <testcase name="When am on Myaccounts page" classname=";deleting-an-account">
             <skipped message="">
@@ -111,29 +129,14 @@
             </skipped>
         </testcase>
     </testsuite>
-    <testsuite name=";transfering-money-from-one-of-my-accounts-to-an-other" tests="9" failures="1" skipped="6">
+    <testsuite name=";transfering-money-from-one-of-my-accounts-to-an-other" tests="7" failures="0" skipped="6">
         <properties>
-            <property name="URI" value="C:/Users/zarak/Documents/GitHub/Bank-master/features/Clients.feature">
+            <property name="URI" value="C:/Users/javad/Desktop/Bank-master/features/Clients.feature">
             </property>
         </properties>
-        <testcase name="Given That there is a bank application browser" classname=";transfering-money-from-one-of-my-accounts-to-an-other" time="0.000588878">
+        <testcase name="Given I have a account as a client" classname=";transfering-money-from-one-of-my-accounts-to-an-other">
         </testcase>
-        <testcase name="And I have a account as a client" classname=";transfering-money-from-one-of-my-accounts-to-an-other" time="0.00025648">
-        </testcase>
-        <testcase name="When I log in with my informations" classname=";transfering-money-from-one-of-my-accounts-to-an-other" time="5.023816718">
-            <failure message="CancellationError: There was an uncaught error in the control flow: NoSuchSessionError: invalid session id">CancellationError: There was an uncaught error in the control flow: NoSuchSessionError: invalid session id
-    at Function.wrap (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:757:14)
-    at ManagedPromise.cancel (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:1273:38)
-    at TaskQueue.abort_ (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:3021:34)
-    at ControlFlow.cancelQueues_ (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:2651:11)
-    at ControlFlow.onQueueError_ (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:2626:10)
-    at TaskQueue.emit (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\events.js:62:21)
-    at TaskQueue.abort_ (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:3026:12)
-    at TaskQueue.processUnhandledRejections_ (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:3124:12)
-    at TaskQueue.executeNext_ (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:3037:40)
-    at asyncRun (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\selenium-webdriver\lib\promise.js:2935:27)</failure>
-        </testcase>
-        <testcase name="Given i have 10K in my löneKonto" classname=";transfering-money-from-one-of-my-accounts-to-an-other">
+        <testcase name="And i have 10K in my löneKonto" classname=";transfering-money-from-one-of-my-accounts-to-an-other">
             <skipped message="">
             </skipped>
         </testcase>
@@ -158,108 +161,112 @@
             </skipped>
         </testcase>
     </testsuite>
-    <testsuite name=";five-transactions-on-the-start-page" tests="6" failures="1" skipped="1">
+    <testsuite name=";five-transactions-on-the-start-page" tests="4" failures="0" skipped="3">
         <properties>
-            <property name="URI" value="C:/Users/zarak/Documents/GitHub/Bank-master/features/Clients.feature">
+            <property name="URI" value="C:/Users/javad/Desktop/Bank-master/features/Clients.feature">
             </property>
         </properties>
-        <testcase name="Given That there is a bank application browser" classname=";five-transactions-on-the-start-page" time="0.000451917">
+        <testcase name="Given I have a account as a client" classname=";five-transactions-on-the-start-page">
         </testcase>
-        <testcase name="And I have a account as a client" classname=";five-transactions-on-the-start-page" time="0.000182101">
+        <testcase name="And i Repeated the last scenario for 5 times" classname=";five-transactions-on-the-start-page">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="When I log in with my informations" classname=";five-transactions-on-the-start-page" time="9.85114013">
-        </testcase>
-        <testcase name="Given i Repeated the last scenario for 5 times" classname=";five-transactions-on-the-start-page" time="10.692640208">
-        </testcase>
-        <testcase name="When i surf to my Start page" classname=";five-transactions-on-the-start-page" time="1.765965741">
-            <failure message="TypeError: Cannot read property &apos;0&apos; of undefined">TypeError: Cannot read property &apos;0&apos; of undefined
-    at Function.startTests (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\ares-helper\index.js:104:41)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+        <testcase name="When i surf to my Start page" classname=";five-transactions-on-the-start-page">
+            <skipped message="">
+            </skipped>
         </testcase>
         <testcase name="Then I should be able to see my last five transactions for my accounts" classname=";five-transactions-on-the-start-page">
             <skipped message="">
             </skipped>
         </testcase>
     </testsuite>
-    <testsuite name=";10-or-more-transactions-on-my-account-page" tests="8" failures="1" skipped="1">
+    <testsuite name=";10-or-more-transactions-on-my-account-page" tests="6" failures="0" skipped="5">
         <properties>
-            <property name="URI" value="C:/Users/zarak/Documents/GitHub/Bank-master/features/Clients.feature">
+            <property name="URI" value="C:/Users/javad/Desktop/Bank-master/features/Clients.feature">
             </property>
         </properties>
-        <testcase name="Given That there is a bank application browser" classname=";10-or-more-transactions-on-my-account-page" time="0.000380616">
+        <testcase name="Given I have a account as a client" classname=";10-or-more-transactions-on-my-account-page">
         </testcase>
-        <testcase name="And I have a account as a client" classname=";10-or-more-transactions-on-my-account-page" time="0.000192873">
+        <testcase name="And i repeated transaction between my accounts for 7 times more" classname=";10-or-more-transactions-on-my-account-page">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="When I log in with my informations" classname=";10-or-more-transactions-on-my-account-page" time="9.165399741">
+        <testcase name="When I am on my account page" classname=";10-or-more-transactions-on-my-account-page">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="Given i repeated transaction between my accounts for 7 times more" classname=";10-or-more-transactions-on-my-account-page" time="13.37951475">
+        <testcase name="And i click on my account Lönekonto" classname=";10-or-more-transactions-on-my-account-page">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="When I am on my account page" classname=";10-or-more-transactions-on-my-account-page" time="1.268132227">
-        </testcase>
-        <testcase name="And i click on my account Lönekonto" classname=";10-or-more-transactions-on-my-account-page" time="2.081457483">
-        </testcase>
-        <testcase name="And then clicked on the Show more button" classname=";10-or-more-transactions-on-my-account-page" time="0.735861165">
-            <failure message="TypeError: Cannot read property &apos;0&apos; of undefined">TypeError: Cannot read property &apos;0&apos; of undefined
-    at Function.startTests (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\ares-helper\index.js:104:41)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+        <testcase name="And then clicked on the Show more button" classname=";10-or-more-transactions-on-my-account-page">
+            <skipped message="">
+            </skipped>
         </testcase>
         <testcase name="Then I should see my last 10 transactions for my accounts" classname=";10-or-more-transactions-on-my-account-page">
             <skipped message="">
             </skipped>
         </testcase>
     </testsuite>
-    <testsuite name=";warninig-massege-when-your-transfer-more-than-30000" tests="9" failures="1" skipped="1">
+    <testsuite name=";warninig-massege-when-your-transfer-more-than-30000" tests="7" failures="0" skipped="6">
         <properties>
-            <property name="URI" value="C:/Users/zarak/Documents/GitHub/Bank-master/features/Clients.feature">
+            <property name="URI" value="C:/Users/javad/Desktop/Bank-master/features/Clients.feature">
             </property>
         </properties>
-        <testcase name="Given That there is a bank application browser" classname=";warninig-massege-when-your-transfer-more-than-30000" time="0.000357533">
+        <testcase name="Given I have a account as a client" classname=";warninig-massege-when-your-transfer-more-than-30000">
         </testcase>
-        <testcase name="And I have a account as a client" classname=";warninig-massege-when-your-transfer-more-than-30000" time="0.00021852">
+        <testcase name="And i have enough money in my Lönekonto" classname=";warninig-massege-when-your-transfer-more-than-30000">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="When I log in with my informations" classname=";warninig-massege-when-your-transfer-more-than-30000" time="10.725362932">
+        <testcase name="When i surf to Transfer money to another account page" classname=";warninig-massege-when-your-transfer-more-than-30000">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="Given i have enough money in my Lönekonto" classname=";warninig-massege-when-your-transfer-more-than-30000" time="2.181092204">
+        <testcase name="And i choose Annat Konot" classname=";warninig-massege-when-your-transfer-more-than-30000">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="When i surf to Transfer money to another account page" classname=";warninig-massege-when-your-transfer-more-than-30000" time="2.168027635">
+        <testcase name="And i choose the reciver account number" classname=";warninig-massege-when-your-transfer-more-than-30000">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="And i choose Annat Konot" classname=";warninig-massege-when-your-transfer-more-than-30000" time="1.070344724">
-        </testcase>
-        <testcase name="And i choose the reciver account number" classname=";warninig-massege-when-your-transfer-more-than-30000" time="1.367474561">
-        </testcase>
-        <testcase name="And i a bigger sum than thirty thousends" classname=";warninig-massege-when-your-transfer-more-than-30000" time="2.831572258">
-            <failure message="TypeError: Cannot read property &apos;0&apos; of undefined">TypeError: Cannot read property &apos;0&apos; of undefined
-    at Function.startTests (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\ares-helper\index.js:104:41)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+        <testcase name="And i a bigger sum than thirty thousends" classname=";warninig-massege-when-your-transfer-more-than-30000">
+            <skipped message="">
+            </skipped>
         </testcase>
         <testcase name="Then transaction should not go through and i should get a warning" classname=";warninig-massege-when-your-transfer-more-than-30000">
             <skipped message="">
             </skipped>
         </testcase>
     </testsuite>
-    <testsuite name=";making-a-card-withdraw" tests="9" failures="1" skipped="1">
+    <testsuite name=";making-a-card-withdraw" tests="7" failures="0" skipped="6">
         <properties>
-            <property name="URI" value="C:/Users/zarak/Documents/GitHub/Bank-master/features/Clients.feature">
+            <property name="URI" value="C:/Users/javad/Desktop/Bank-master/features/Clients.feature">
             </property>
         </properties>
-        <testcase name="Given That there is a bank application browser" classname=";making-a-card-withdraw" time="0.000333936">
+        <testcase name="Given I have a account as a client" classname=";making-a-card-withdraw">
         </testcase>
-        <testcase name="And I have a account as a client" classname=";making-a-card-withdraw" time="0.000140038">
+        <testcase name="When i Am on the simulating page" classname=";making-a-card-withdraw">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="When I log in with my informations" classname=";making-a-card-withdraw" time="12.023846469">
+        <testcase name="And i enter the 10 as sum" classname=";making-a-card-withdraw">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="When i Am on the simulating page" classname=";making-a-card-withdraw" time="1.157456561">
+        <testcase name="And chose Uttag" classname=";making-a-card-withdraw">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="And i enter the 10 as sum" classname=";making-a-card-withdraw" time="2.033876882">
+        <testcase name="And submit my transaction" classname=";making-a-card-withdraw">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="And chose Uttag" classname=";making-a-card-withdraw" time="0.043217365">
-        </testcase>
-        <testcase name="And submit my transaction" classname=";making-a-card-withdraw" time="0.002147249">
-        </testcase>
-        <testcase name="When am on the Start page" classname=";making-a-card-withdraw" time="2.160406593">
-            <failure message="TypeError: Cannot read property &apos;0&apos; of undefined">TypeError: Cannot read property &apos;0&apos; of undefined
-    at Function.startTests (C:\Users\zarak\Documents\GitHub\Bank-master\node_modules\ares-helper\index.js:104:41)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+        <testcase name="When am on the Start page" classname=";making-a-card-withdraw">
+            <skipped message="">
+            </skipped>
         </testcase>
         <testcase name="Then i can see the new balance of my account" classname=";making-a-card-withdraw">
             <skipped message="">

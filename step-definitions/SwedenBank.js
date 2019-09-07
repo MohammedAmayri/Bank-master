@@ -6,32 +6,39 @@ let { $, sleep,S} = require('./funcs');
 const ares = require('ares-helper'); // laddar in ares helper
 ares.debug = true; // vi får debug info
 ares.setProjectInfo({ // hjälpfunktion för att kunna "logga in" på ares
-  "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njc0NTMwODksImVtYWlsIjoiaS5jYW4uMjAyOC50Y2NAZ21haWwuY29tIiwiaWF0IjoxNTY3MzY2Njg5fQ.cC9lJullL9iuBAFBSUbA4xQfCcOM51vLersEYg8Q5vw",
-  "workspaceName": "JAM PROJECTS",
-  "projectKey": "5d6fe0383e47305847483f2c",
-  "projectName": "SwedenBank"
+  "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NjcyNDMzOTcsImVtYWlsIjoiamF2YWRkdXJyYW5pQGdtYWlsLmNvbSIsImlhdCI6MTU2NzE1Njk5N30.Ys3JDTJTqtqFyYzyDqW-5U7i-kwVW0JRo3YmJ1Vn7PY",
+  "workspaceName": "outlook_default",
+  "projectKey": "5d6e13283e47305847483dcf",
+  "projectName": "BankApp"
 });
 
 module.exports = function () {
 
 
-    this.Given(/^That there is a bank application browser$/, async function () {
-        //bothing to test
-    });
+    this.Given(/^I navigate to Sweden Bank website$/, async function () {
+        
+        await ares.startTests()
+        await ares.startModule
+        ({ 
+          moduleName: 'skaffa ett nytt konto',
+          totalTests: 1
+        });
 
-    this.Given(/^I have a account as a client$/, async function () {
-        // Nothing to test
-    });
-    this.When(/^I log in with my informations$/, async function () {
         await helpers.loadPage('http://localhost:3000/#login');
         await sleep(1000);
+       
+    });
+    
+
+     this.When(/^I log in with my information$/, async function () {
+       
         let username = await S("username");
-        myuser = 'saraa'
-        console.log(myuser)
+        myuser = 'javad'
+        //console.log(myuser)
         await username.sendKeys(myuser)
         await sleep(1000);
         let password = await S("password");
-        mypass = 'saraaa'
+        mypass = 'Davaj1'
         await password.sendKeys(mypass)
         await sleep(1000);
 
@@ -42,16 +49,18 @@ module.exports = function () {
         
     });
 
-    ;;;;;;;;;;;;;;;;
     //sc1
-    this.When(/^am logged in as Mohammed$/, async function () {
-        assert(driver.findElements(by.css('Inloggad som')), 'Something went wrong with your loging-in')
-        await ares.startTests(); 
-        await ares.startModule
-        ({ 
-          moduleName: 'Logging in',
-          totalTests: 1
-        });
+    this.When(/^am logged in as a customer$/, async function () {
+        
+        assert(driver.findElements(by.css('Inloggad som')), 'Something went wrong with your log-in')
+        
+        /*await ares.testResult({
+            moduleName: 'Logging in',
+            title: 'Is the login succesful?',
+            passed: textOnPage,
+            errorMessage: 'Your username or password is not correct'
+        })*/
+      
     });
 
     this.When(/^i click on Mina konto$/, async function () {
@@ -68,6 +77,7 @@ module.exports = function () {
         nameAccount.sendKeys('sparingkonto')
         add = await driver.findElement(by.xpath('//*[@id="addAccountModal"]/div/div/div[3]/button[2]'))
         add.click()
+        
         ance = await driver.findElement(by.css('body > main > div > article > section.accounts.row.px-6 > table > tbody > tr:last-child > th > a'));
         balance1 = await ance.getText();
         console.log(balance1)
@@ -91,12 +101,11 @@ module.exports = function () {
                 counto++
              }
          }
-
-
+         
         assert(counto == 2, 'we can not find your new account')
     
-        console.log(counto)
-        
+        //console.log(counto)
+    
         await ares.testResult({ // skicka resultatet till testrapporten
             moduleName: 'skaffa ett nytt konto',
             title: 'Kan jag skaffa ett nytt konto?',
@@ -106,11 +115,48 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'skaffa ett nytt konto',
           });
-          await ares.endTests();
+           
     
+    });
+    
+    this.Given(/^I navigate to Sweden Bank website1$/, async function () {
+        // Nothing to test
+        await ares.startModule
+        ({ 
+          moduleName: 'sätta in pengar',
+          totalTests: 1
+        });
+
+        await helpers.loadPage('http://localhost:3000/#login');
+        await sleep(1000);
+       
+    });
+    
+    this.Given(/^I log in with my information1$/, async function () {
+
+        /*await ares.startModule
+        ({ 
+          moduleName: 'sätta in pengar',
+          totalTests: 1
+        });*/
+        let username = await S("username");
+        myuser = 'javad'
+        //console.log(myuser)
+        await username.sendKeys(myuser)
+        await sleep(1000);
+        let password = await S("password");
+        mypass = 'Davaj1'
+        await password.sendKeys(mypass)
+        await sleep(1000);
+
+        let submitb = await $("submitb")
+        username.submit();
+        await sleep(1000);
+     
     });
 
     this.When(/^i surf to the simulating page$/, async function () {
+
         await helpers.loadPage('http://localhost:3000/#simulate');
         await sleep(1000);
 
@@ -122,12 +168,8 @@ module.exports = function () {
         amount.sendKeys(money)
         await sleep(2000);
         
-        await ares.startTests(); 
-        await ares.startModule
-        ({ 
-          moduleName: 'sätta in pengar',
-          totalTests: 1
-        });
+        
+        
     });
     this.When(/^chose Isättning$/, async function () {
         transChoice = await driver.findElement(by.xpath('//*[@id="depositOrWithdraw"]'))
@@ -156,53 +198,75 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'sätta in pengar',
           });
-          await ares.endTests();
+           
       
 
 
     });
-    ;;;;;;;;;;;;;;;;
+
     //sc2
     
-    this.Given(/^i have 10K in my löneKonto$/, async function () {
+    this.Given(/^I log into my account$/, async function () {
         //already tested
+        /*await ares.startModule
+        ({ 
+          moduleName: 'sätta in pengar',
+          totalTests: 1
+        });*/
+
+        await helpers.loadPage('http://localhost:3000/#login');
+        await sleep(1000);
+
+        let username = await S("username");
+        myuser = 'javad'
+        //console.log(myuser)
+        await username.sendKeys(myuser)
+        await sleep(1000);
+        let password = await S("password");
+        mypass = 'Davaj1'
+        await password.sendKeys(mypass)
+        await sleep(1000);
+
+        let submitb = await $("submitb")
+        username.submit();
+        await sleep(1000);
+
+        
     });
-    this.When(/^i surf to transfermyaccount$/, async function () {
+
+ 
+    this.When(/^i click on Överföringar mina konton$/, async function () {
         await helpers.loadPage('http://localhost:3000/#start');
         await sleep(1000);
         let tdWithBalance = await driver.findElement(by.xpath('/html/body/main/div/article/section[2]/table/tbody/tr[1]/td[2]'));
         balance= await tdWithBalance.getText()
         balance = balance.replace(/\D/g, '') / 100; // remove all charactars that are not numbers and convert to number dividing by 1
         console.log(balance)
-        await helpers.loadPage('http://localhost:3000/#transfermyaccount');
+            await helpers.loadPage('http://localhost:3000/#transfermyaccount');
         await sleep(1000)
 
-        await ares.startTests(); 
+        
         await ares.startModule
         ({ 
           moduleName: 'överforing',
           totalTests: 1
         });
     });
-    this.When(/^i chose the sum i want to send$/, async function () {
+    this.When(/^i transfer 100 kr to my other account Sparingkonto$/, async function () {
         amount = await driver.findElement(by.xpath('//*[@id="sum"]'))
         assert(amount, 'whats wrong?')
-        money = 10
+        money = 100
         await amount.sendKeys(money)
-    });
-    this.When(/^the account that we want to recive the money as Sparingkonto$/, async function () {
+     
         accountChoice = await driver.findElement(by.xpath('//*[@id="toAccountNumber"]'))
         assert(accountChoice, 'whats wrong?')
-        let myAccount = 'sparingkonto - 4508-938222'
+        let myAccount = 'sparingkonto'
         await accountChoice.sendKeys(myAccount)
-       
-    });
-    this.When(/^click on Utför to submit the transaction$/, async function () {
         await accountChoice.submit()
-
         await sleep(1000)
     });
-    this.Then(/^i should be able to see the new balance for the 2 accounts correctly$/, async function () {
+
+    this.Then(/^i should be able to see a correct new balance for both accounts$/, async function () {
         await helpers.loadPage('http://localhost:3000/#start');
         await sleep(1000);
         tdWithBalance = await driver.findElement(by.xpath('/html/body/main/div/article/section[2]/table/tbody/tr[1]/td[2]'));
@@ -214,6 +278,8 @@ module.exports = function () {
         assert(balance - money == balance2, 'no can do')
         await sleep(2000)
 
+               
+
         await ares.testResult({ // skicka resultatet till testrapporten
             moduleName: 'överforing',
             title: 'Kan jag överfora pengar till en annan konto?',
@@ -223,42 +289,55 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'överforing',
           });
-          await ares.endTests();
+
+          let logOut = await $('body > main > div > aside > nav > ul > li:nth-child(7) > button > a');
+          logOut.click();
+          await sleep(1000); 
+           
+    });
+
+    this.Given(/^I am logged in as a bank customer$/, async function () {
+        // Nothing to test
+       
+        await helpers.loadPage('http://localhost:3000/#login');
+        await sleep(1000);
+
+        let username = await S("username");
+        myuser = 'amayri'
+        //console.log(myuser)
+        await username.sendKeys(myuser)
+        await sleep(1000);
+        let password = await S("password");
+        mypass = 'Iryama1'
+        await password.sendKeys(mypass)
+        await sleep(1000);
+
+        let submitb = await $("submitb")
+        username.submit();
+        await sleep(1000);
     });
   
     //sc3
-    this.When(/^i Am on the simulating page$/, async function () {
+    this.When(/^I visit the simulation page$/, async function () {
         await helpers.loadPage('http://localhost:3000/#simulate');
         await sleep(1000);
 
     });
-    this.When(/^i enter the 10 as sum$/, async function () {
+    this.When(/^i make a 200 kr cash withdrawal$/, async function () {
         amount = await driver.findElement(by.xpath('//*[@id="sum"]'))
         assert(amount, 'whats wrong?')
         money = 10
         amount.sendKeys(money)
         await sleep(2000);
-    });
-    this.When(/^chose Uttag$/, async function () {
         transChoice = await driver.findElement(by.xpath('//*[@id="depositOrWithdraw"]'))
         assert(transChoice, 'whats wrong?')
         myCChoice = 'Uttag'
         transChoice.sendKeys(myCChoice)
-    });
-    this.When(/^submit my transaction$/, async function () {
         transChoice.submit()
+    
     });
-    this.When(/^am on the Start page$/, async function () {
-        await helpers.loadPage('http://localhost:3000/#start');
-        await sleep(1000);
-        await ares.startTests(); 
-        await ares.startModule
-        ({ 
-          moduleName: 'uttag',
-          totalTests: 1
-        });
-    });
-    this.Then(/^i can see the new balance of my account$/, async function () {
+    
+    this.Then(/^I navigate to my online account and here I can see the new balance$/, async function () {
         await helpers.loadPage('http://localhost:3000/#start');
         await sleep(1000);
         
@@ -278,10 +357,14 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'uttag',
           });
-          await ares.endTests();
+           
     });
 
     //sc5
+
+    this.Given(/^I have a account as a client$/, async function () {
+        // Nothing to test
+    });
 
     this.Given(/^i Repeated the last scenario for 5 times$/, async function () {
         x = 0;
@@ -310,7 +393,7 @@ module.exports = function () {
         await sleep(1000);
         
 
-        await ares.startTests(); 
+        
         await ares.startModule
         ({ 
           moduleName: '5transactions',
@@ -342,10 +425,14 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: '5transactions',
           });
-          await ares.endTests();
+           
 
     });
     //sc6
+
+    this.Given(/^I have a account as a client$/, async function () {
+        // Nothing to test
+    });
 
     this.Given(/i repeated transaction between my accounts for 7 times more$/, async function () {
         x = 0;
@@ -382,7 +469,7 @@ module.exports = function () {
         let showme = await driver.findElement(by.xpath('//*[@id="show-button"]'))
         showme.click()
         
-        await ares.startTests(); 
+        
         await ares.startModule
         ({ 
           moduleName: '10transactions',
@@ -407,10 +494,15 @@ module.exports = function () {
           });
 
 
-          await ares.endTests();
+           
     });
 
     //sc7,1
+
+    this.Given(/^I have a account as a client$/, async function () {
+        // Nothing to test
+    });
+
     this.When(/^i surf to my account$/, async function () {
         await helpers.loadPage('http://localhost:3000/#my-accounts');
         await sleep(1000);
@@ -429,7 +521,7 @@ module.exports = function () {
         add=await driver.findElement(by.xpath('//*[@id="addAccountModal"]/div/div/div[3]/button[2]'))
         add.click()
 
-        await ares.startTests(); 
+        
         await ares.startModule
         ({ 
           moduleName: 'changeName',
@@ -453,12 +545,17 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'changeName',
           });
-          await ares.endTests();
+           
     });
     
 
 
     //sc7.2
+
+    this.Given(/^I have a account as a client$/, async function () {
+        // Nothing to test
+    });
+
     this.When(/^i surf to My accounts$/, async function () {
         await helpers.loadPage('http://localhost:3000/#my-accounts');
         await sleep(1000);
@@ -486,6 +583,11 @@ module.exports = function () {
     
 
     //sc7.3
+
+    this.Given(/^I have a account as a client$/, async function () {
+        // Nothing to test
+    });
+
     this.When(/am on Myaccounts page$/, async function () {
         await helpers.loadPage('http://localhost:3000/#my-accounts');
         await sleep(1000);
@@ -500,7 +602,7 @@ module.exports = function () {
     deleteAccount.click()
     await sleep(2000);
 
-    await ares.startTests(); 
+    
         await ares.startModule
         ({ 
           moduleName: 'ta bort konto',
@@ -528,11 +630,15 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'ta bort konto',
           });
-          await ares.endTests();
+           
     });
 
 
     //sc9
+
+    this.Given(/^I have a account as a client$/, async function () {
+        // Nothing to test
+    });
 
     this.When(/I click on the button Transfer to other$/, async function () {
         await helpers.loadPage('http://localhost:3000/#transfermyaccount');
@@ -548,7 +654,7 @@ module.exports = function () {
         await accountChoice.sendKeys(myAccount)
         await accountChoice.submit()
 
-        await ares.startTests(); 
+        
         await ares.startModule
         ({ 
           moduleName: 'överfora till andra',
@@ -580,10 +686,14 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: ' överfora till andra',
           });
-          await ares.endTests();
+           
     });
 
     //sc11.1
+    this.Given(/^I have a account as a client$/, async function () {
+        // Nothing to test
+    });
+
     this.Given(/^I can see the summary of the accounts balance$/, async function () {
         await helpers.loadPage('http://localhost:3000/#start');
         await sleep(1000);
@@ -604,6 +714,10 @@ module.exports = function () {
 
 
     //sc11.2
+
+    this.Given(/^I have a account as a client$/, async function () {
+        // Nothing to test
+    });
 
     this.When(/^I transfer money from an account to an other 5 times$/, async function () {
         x = 0;
@@ -639,6 +753,11 @@ module.exports = function () {
 
 
     //sc12
+
+    this.Given(/^I have a account as a client$/, async function () {
+        // Nothing to test
+    });
+
     this.Given(/^I choose PG payment to account number$/, async function () {
 
         await helpers.loadPage('http://localhost:3000/#start');
@@ -672,7 +791,7 @@ module.exports = function () {
         alert.accept();
         await sleep(2000);
 
-        await ares.startTests(); 
+        
         await ares.startModule
         ({ 
           moduleName: 'PG betalning',
@@ -705,9 +824,14 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'PG betalning',
           });
-          await ares.endTests();
+           
     });
     //sc14
+
+    this.Given(/^I have a account as a client$/, async function () {
+        // Nothing to test
+    });
+
     this.Given(/^i have enough money in my Lönekonto$/, async function () {
         await helpers.loadPage('http://localhost:3000/#start');
         await sleep(2000);
@@ -744,7 +868,7 @@ module.exports = function () {
         ToAccount.submit();
         await sleep(1000);
 
-        await ares.startTests(); 
+        
         await ares.startModule
         ({ 
           moduleName: 'över gränsen',
@@ -766,7 +890,8 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'över gränsen',
           });
-          await ares.endTests();
+          await ares.endTests()
+           
     });
 
   
