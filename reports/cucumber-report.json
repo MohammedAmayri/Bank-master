@@ -1,0 +1,1195 @@
+[
+  {
+    "description": "When working with the bank application everything should be working to specifications",
+    "elements": [
+      {
+        "id": ";logginig-in-//skaffa-ett-nytt(lyckas)",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Logginig in //Skaffa ett nytt(lyckas)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "That there is a bank application browser",
+            "result": {
+              "status": "passed",
+              "duration": 2894900
+            },
+            "line": 5,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:19"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I have a account as a client",
+            "result": {
+              "status": "passed",
+              "duration": 116699
+            },
+            "line": 6,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I log in with my informations",
+            "result": {
+              "status": "passed",
+              "duration": 8187795801
+            },
+            "line": 7,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:27"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "am logged in as Mohammed",
+            "result": {
+              "status": "passed",
+              "duration": 1478477900
+            },
+            "line": 11,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:49"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "i click on Mina konto",
+            "result": {
+              "status": "passed",
+              "duration": 1049757899
+            },
+            "line": 12,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:59"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "chose to create a new account with the name SparingKonto",
+            "result": {
+              "status": "passed",
+              "duration": 2215540400
+            },
+            "line": 13,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:63"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "i should be able to see my 2 accounts",
+            "result": {
+              "status": "passed",
+              "duration": 2614912400
+            },
+            "line": 14,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:81"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 139669000
+            },
+            "hidden": true,
+            "match": {
+              "location": "folder\\Bank-master\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": ";puting-in-10k-in-my-lönekonto-//sätta-in-pengar(lyckas)",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "puting in 10K in my löneKonto //sätta in pengar(lyckas)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "That there is a bank application browser",
+            "result": {
+              "status": "passed",
+              "duration": 150600
+            },
+            "line": 5,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:19"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I have a account as a client",
+            "result": {
+              "status": "passed",
+              "duration": 52299
+            },
+            "line": 6,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I log in with my informations",
+            "result": {
+              "status": "passed",
+              "duration": 7123343000
+            },
+            "line": 7,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:27"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "i surf to the simulating page",
+            "result": {
+              "status": "passed",
+              "duration": 1046014899
+            },
+            "line": 17,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:115"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "i enter the right sum",
+            "result": {
+              "status": "passed",
+              "duration": 2629649301
+            },
+            "line": 18,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:123"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "chose Isättning",
+            "result": {
+              "status": "passed",
+              "duration": 13334401
+            },
+            "line": 19,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:137"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "submited my transaction",
+            "result": {
+              "status": "passed",
+              "duration": 308500
+            },
+            "line": 20,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:143"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "when on the Start page i can see the new balance of my account",
+            "result": {
+              "status": "passed",
+              "duration": 2957795100
+            },
+            "line": 21,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:146"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 138994500
+            },
+            "hidden": true,
+            "match": {
+              "location": "folder\\Bank-master\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": ";transfering-money-from-one-of-my-accounts-to-an-other-//överforing(lyckas)",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Transfering money from one of my accounts to an other //överforing(lyckas)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "That there is a bank application browser",
+            "result": {
+              "status": "passed",
+              "duration": 132899
+            },
+            "line": 5,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:19"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I have a account as a client",
+            "result": {
+              "status": "passed",
+              "duration": 77100
+            },
+            "line": 6,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I log in with my informations",
+            "result": {
+              "status": "passed",
+              "duration": 9321316001
+            },
+            "line": 7,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:27"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "i have 10K in my löneKonto",
+            "result": {
+              "status": "passed",
+              "duration": 103501
+            },
+            "line": 27,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:173"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "i surf to transfermyaccount",
+            "result": {
+              "status": "passed",
+              "duration": 2752288801
+            },
+            "line": 28,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:177"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "i chose the sum i want to send",
+            "result": {
+              "status": "passed",
+              "duration": 70023400
+            },
+            "line": 29,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:194"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "the account that we want to recive the money as Sparingkonto",
+            "result": {
+              "status": "passed",
+              "duration": 139729100
+            },
+            "line": 30,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:200"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "click on Utför to submit the transaction",
+            "result": {
+              "status": "passed",
+              "duration": 1036866700
+            },
+            "line": 31,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:207"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "i should be able to see the new balance for the 2 accounts correctly",
+            "result": {
+              "status": "passed",
+              "duration": 4852639800
+            },
+            "line": 32,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:212"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 139920600
+            },
+            "hidden": true,
+            "match": {
+              "location": "folder\\Bank-master\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": ";five-transactions-on-the-start-page-//5transaction(lyckas)",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "five transactions on the start page //5transaction(lyckas)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "That there is a bank application browser",
+            "result": {
+              "status": "passed",
+              "duration": 117300
+            },
+            "line": 5,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:19"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I have a account as a client",
+            "result": {
+              "status": "passed",
+              "duration": 46100
+            },
+            "line": 6,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I log in with my informations",
+            "result": {
+              "status": "passed",
+              "duration": 7611502601
+            },
+            "line": 7,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:27"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "i Repeated the last scenario for 5 times",
+            "result": {
+              "status": "passed",
+              "duration": 6844379100
+            },
+            "line": 35,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:294"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "i surf to my Start page",
+            "result": {
+              "status": "passed",
+              "duration": 1642100299
+            },
+            "line": 36,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:317"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should be able to see my last five transactions for my accounts",
+            "result": {
+              "status": "passed",
+              "duration": 6613954399
+            },
+            "line": 37,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:329"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 178889500
+            },
+            "hidden": true,
+            "match": {
+              "location": "folder\\Bank-master\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": ";10-or-more-transactions-on-my-account-page-//-10-transaction-(lyckas)",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "10 or more transactions on my account page // 10 transaction (lyckas)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "That there is a bank application browser",
+            "result": {
+              "status": "passed",
+              "duration": 120600
+            },
+            "line": 5,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:19"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I have a account as a client",
+            "result": {
+              "status": "passed",
+              "duration": 74400
+            },
+            "line": 6,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I log in with my informations",
+            "result": {
+              "status": "passed",
+              "duration": 7528565301
+            },
+            "line": 7,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:27"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "i repeated transaction between my accounts for 7 times more",
+            "result": {
+              "status": "passed",
+              "duration": 8842021599
+            },
+            "line": 40,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:359"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I am on my account page",
+            "result": {
+              "status": "passed",
+              "duration": 1033088001
+            },
+            "line": 41,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:382"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "i click on my account Lönekonto",
+            "result": {
+              "status": "passed",
+              "duration": 2012409001
+            },
+            "line": 42,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:385"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "then clicked on the Show more button",
+            "result": {
+              "status": "passed",
+              "duration": 631588699
+            },
+            "line": 43,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:390"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should see my last 10 transactions for my accounts",
+            "result": {
+              "status": "passed",
+              "duration": 1412631499
+            },
+            "line": 44,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:403"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 143803400
+            },
+            "hidden": true,
+            "match": {
+              "location": "folder\\Bank-master\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": ";warninig-massege-when-your-transfer-more-than-30000-//övergränsen-(lyckas)",
+        "keyword": "Scenario",
+        "line": 46,
+        "name": "warninig massege when your transfer more than 30000 //övergränsen (lyckas)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "That there is a bank application browser",
+            "result": {
+              "status": "passed",
+              "duration": 90099
+            },
+            "line": 5,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:19"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I have a account as a client",
+            "result": {
+              "status": "passed",
+              "duration": 58600
+            },
+            "line": 6,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I log in with my informations",
+            "result": {
+              "status": "passed",
+              "duration": 7294438301
+            },
+            "line": 7,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:27"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "i have enough money in my Lönekonto",
+            "result": {
+              "status": "passed",
+              "duration": 2060397199
+            },
+            "line": 47,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:725"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "i surf to Transfer money to another account page",
+            "result": {
+              "status": "passed",
+              "duration": 2060068600
+            },
+            "line": 48,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:739"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "i choose Annat Konot",
+            "result": {
+              "status": "passed",
+              "duration": 1014661800
+            },
+            "line": 49,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:744"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "i choose the reciver account number",
+            "result": {
+              "status": "passed",
+              "duration": 1148805900
+            },
+            "line": 50,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:749"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "i a bigger sum than thirty thousends",
+            "result": {
+              "status": "passed",
+              "duration": 2618640200
+            },
+            "line": 51,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:755"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "transaction should not go through and i should get a warning",
+            "result": {
+              "status": "passed",
+              "duration": 1621561801
+            },
+            "line": 52,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:772"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 178661099
+            },
+            "hidden": true,
+            "match": {
+              "location": "folder\\Bank-master\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": ";making-a-card-withdraw-//uttag-(lyckas)",
+        "keyword": "Scenario",
+        "line": 54,
+        "name": "Making a Card withdraw //uttag (lyckas)",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "That there is a bank application browser",
+            "result": {
+              "status": "passed",
+              "duration": 90899
+            },
+            "line": 5,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:19"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I have a account as a client",
+            "result": {
+              "status": "passed",
+              "duration": 47100
+            },
+            "line": 6,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I log in with my informations",
+            "result": {
+              "status": "passed",
+              "duration": 7387925100
+            },
+            "line": 7,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:27"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "i Am on the simulating page",
+            "result": {
+              "status": "passed",
+              "duration": 1053711699
+            },
+            "line": 55,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:237"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "i enter the 10 as sum",
+            "result": {
+              "status": "passed",
+              "duration": 2014029200
+            },
+            "line": 56,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:243"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "chose Uttag",
+            "result": {
+              "status": "passed",
+              "duration": 14298300
+            },
+            "line": 57,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:250"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "submit my transaction",
+            "result": {
+              "status": "passed",
+              "duration": 443599
+            },
+            "line": 58,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:256"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "am on the Start page",
+            "result": {
+              "status": "passed",
+              "duration": 1728932200
+            },
+            "line": 59,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:259"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "i can see the new balance of my account",
+            "result": {
+              "status": "passed",
+              "duration": 2490766200
+            },
+            "line": 60,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:269"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 148618100
+            },
+            "hidden": true,
+            "match": {
+              "location": "folder\\Bank-master\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": ";pg-payment",
+        "keyword": "Scenario",
+        "line": 62,
+        "name": "PG payment",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "That there is a bank application browser",
+            "result": {
+              "status": "passed",
+              "duration": 104900
+            },
+            "line": 5,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:19"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I have a account as a client",
+            "result": {
+              "status": "passed",
+              "duration": 58300
+            },
+            "line": 6,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I log in with my informations",
+            "result": {
+              "status": "passed",
+              "duration": 7473346801
+            },
+            "line": 7,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:27"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I choose PG payment to account number",
+            "result": {
+              "status": "passed",
+              "duration": 11389717301
+            },
+            "line": 63,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:654"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should be able to pay the chosen sum",
+            "result": {
+              "status": "passed",
+              "duration": 3835934001
+            },
+            "line": 64,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:697"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 141145301
+            },
+            "hidden": true,
+            "match": {
+              "location": "folder\\Bank-master\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": ";change-the-name-of-the-account",
+        "keyword": "Scenario",
+        "line": 66,
+        "name": "Change the name of the account",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "That there is a bank application browser",
+            "result": {
+              "status": "passed",
+              "duration": 100900
+            },
+            "line": 5,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:19"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I have a account as a client",
+            "result": {
+              "status": "passed",
+              "duration": 61101
+            },
+            "line": 6,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I log in with my informations",
+            "result": {
+              "status": "passed",
+              "duration": 7379368599
+            },
+            "line": 7,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:27"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "i surf to my account",
+            "result": {
+              "status": "passed",
+              "duration": 1045987800
+            },
+            "line": 67,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:423"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "click on LäggTill",
+            "result": {
+              "status": "passed",
+              "duration": 13505501
+            },
+            "line": 68,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:428"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "i chose to name the account mynewaccount",
+            "result": {
+              "status": "passed",
+              "duration": 2726788700
+            },
+            "line": 69,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:434"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should be able to see the new account on the same page",
+            "result": {
+              "status": "passed",
+              "duration": 3404041501
+            },
+            "line": 70,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:449"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 142107900
+            },
+            "hidden": true,
+            "match": {
+              "location": "folder\\Bank-master\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "id": ";deleting-an-account-//tabortkonto",
+        "keyword": "Scenario",
+        "line": 72,
+        "name": "Deleting an Account //tabortkonto",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "That there is a bank application browser",
+            "result": {
+              "status": "passed",
+              "duration": 96801
+            },
+            "line": 5,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:19"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I have a account as a client",
+            "result": {
+              "status": "passed",
+              "duration": 56200
+            },
+            "line": 6,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I log in with my informations",
+            "result": {
+              "status": "passed",
+              "duration": 7291736200
+            },
+            "line": 7,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:27"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "am on Myaccounts page",
+            "result": {
+              "status": "passed",
+              "duration": 1684387699
+            },
+            "line": 73,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:501"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "click on Tabort Konto on the side of my mynewaccount2 account",
+            "result": {
+              "status": "passed",
+              "duration": 2015373301
+            },
+            "line": 74,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:512"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should be able to see that the account has been deleted",
+            "result": {
+              "status": "passed",
+              "duration": 6460989201
+            },
+            "line": 75,
+            "match": {
+              "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:524"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 130765701
+            },
+            "hidden": true,
+            "match": {
+              "location": "folder\\Bank-master\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "",
+    "tags": [],
+    "uri": "C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature"
+  }
+]

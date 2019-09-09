@@ -1,32 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name=";pg-payment" tests="5" failures="1" skipped="1">
+    <testsuite name=";logginig-in-//skaffa-ett-nytt(lyckas)" tests="7" failures="0" skipped="0">
         <properties>
             <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
             </property>
         </properties>
-        <testcase name="Given That there is a bank application browser" classname=";pg-payment" time="0.002702401">
+        <testcase name="Given That there is a bank application browser" classname=";logginig-in-//skaffa-ett-nytt(lyckas)" time="0.0028949">
         </testcase>
-        <testcase name="And I have a account as a client" classname=";pg-payment" time="0.0001143">
+        <testcase name="And I have a account as a client" classname=";logginig-in-//skaffa-ett-nytt(lyckas)" time="0.000116699">
         </testcase>
-        <testcase name="When I log in with my informations" classname=";pg-payment" time="7.8134307">
+        <testcase name="When I log in with my informations" classname=";logginig-in-//skaffa-ett-nytt(lyckas)" time="8.187795801">
         </testcase>
-        <testcase name="Given I choose PG payment to account number" classname=";pg-payment" time="8.798703">
-            <failure message="NoSuchAlertError: no such alert">NoSuchAlertError: no such alert
-  (Session info: chrome=76.0.3809.132)
-  (Driver info: chromedriver=76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}),platform=Windows NT 10.0.17763 x86_64)
-    at Object.checkLegacyResponse (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\node_modules\selenium-webdriver\lib\error.js:529:15)
-    at parseHttpResponse (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\node_modules\selenium-webdriver\lib\http.js:509:13)
-    at doSend.then.response (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\node_modules\selenium-webdriver\lib\http.js:441:30)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-From: Task: WebDriver.switchTo().alert()
-    at thenableWebDriverProxy.schedule (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
-    at TargetLocator.alert (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\node_modules\selenium-webdriver\lib\webdriver.js:1867:29)
-    at createWorld.&lt;anonymous&gt; (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\step-definitions\SwedenBank.js:682:35)</failure>
+        <testcase name="When am logged in as Mohammed" classname=";logginig-in-//skaffa-ett-nytt(lyckas)" time="1.4784779">
         </testcase>
-        <testcase name="Then I should be able to pay the chosen sum" classname=";pg-payment">
-            <skipped message="">
-            </skipped>
+        <testcase name="And i click on Mina konto" classname=";logginig-in-//skaffa-ett-nytt(lyckas)" time="1.049757899">
+        </testcase>
+        <testcase name="And chose to create a new account with the name SparingKonto" classname=";logginig-in-//skaffa-ett-nytt(lyckas)" time="2.2155404">
+        </testcase>
+        <testcase name="Then i should be able to see my 2 accounts" classname=";logginig-in-//skaffa-ett-nytt(lyckas)" time="2.6149124">
+        </testcase>
+    </testsuite>
+    <testsuite name=";puting-in-10k-in-my-lönekonto-//sätta-in-pengar(lyckas)" tests="8" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
+            </property>
+        </properties>
+        <testcase name="Given That there is a bank application browser" classname=";puting-in-10k-in-my-lönekonto-//sätta-in-pengar(lyckas)" time="0.0001506">
+        </testcase>
+        <testcase name="And I have a account as a client" classname=";puting-in-10k-in-my-lönekonto-//sätta-in-pengar(lyckas)" time="0.000052299">
+        </testcase>
+        <testcase name="When I log in with my informations" classname=";puting-in-10k-in-my-lönekonto-//sätta-in-pengar(lyckas)" time="7.123343">
+        </testcase>
+        <testcase name="When i surf to the simulating page" classname=";puting-in-10k-in-my-lönekonto-//sätta-in-pengar(lyckas)" time="1.046014899">
+        </testcase>
+        <testcase name="And i enter the right sum" classname=";puting-in-10k-in-my-lönekonto-//sätta-in-pengar(lyckas)" time="2.629649301">
+        </testcase>
+        <testcase name="And chose Isättning" classname=";puting-in-10k-in-my-lönekonto-//sätta-in-pengar(lyckas)" time="0.013334401">
+        </testcase>
+        <testcase name="And submited my transaction" classname=";puting-in-10k-in-my-lönekonto-//sätta-in-pengar(lyckas)" time="0.0003085">
+        </testcase>
+        <testcase name="Then when on the Start page i can see the new balance of my account" classname=";puting-in-10k-in-my-lönekonto-//sätta-in-pengar(lyckas)" time="2.9577951">
+        </testcase>
+    </testsuite>
+    <testsuite name=";transfering-money-from-one-of-my-accounts-to-an-other-//överforing(lyckas)" tests="9" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
+            </property>
+        </properties>
+        <testcase name="Given That there is a bank application browser" classname=";transfering-money-from-one-of-my-accounts-to-an-other-//överforing(lyckas)" time="0.000132899">
+        </testcase>
+        <testcase name="And I have a account as a client" classname=";transfering-money-from-one-of-my-accounts-to-an-other-//överforing(lyckas)" time="0.0000771">
+        </testcase>
+        <testcase name="When I log in with my informations" classname=";transfering-money-from-one-of-my-accounts-to-an-other-//överforing(lyckas)" time="9.321316001">
+        </testcase>
+        <testcase name="Given i have 10K in my löneKonto" classname=";transfering-money-from-one-of-my-accounts-to-an-other-//överforing(lyckas)" time="0.000103501">
+        </testcase>
+        <testcase name="When i surf to transfermyaccount" classname=";transfering-money-from-one-of-my-accounts-to-an-other-//överforing(lyckas)" time="2.752288801">
+        </testcase>
+        <testcase name="And i chose the sum i want to send" classname=";transfering-money-from-one-of-my-accounts-to-an-other-//överforing(lyckas)" time="0.0700234">
+        </testcase>
+        <testcase name="And the account that we want to recive the money as Sparingkonto" classname=";transfering-money-from-one-of-my-accounts-to-an-other-//överforing(lyckas)" time="0.1397291">
+        </testcase>
+        <testcase name="And click on Utför to submit the transaction" classname=";transfering-money-from-one-of-my-accounts-to-an-other-//överforing(lyckas)" time="1.0368667">
+        </testcase>
+        <testcase name="Then i should be able to see the new balance for the 2 accounts correctly" classname=";transfering-money-from-one-of-my-accounts-to-an-other-//överforing(lyckas)" time="4.8526398">
+        </testcase>
+    </testsuite>
+    <testsuite name=";five-transactions-on-the-start-page-//5transaction(lyckas)" tests="6" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
+            </property>
+        </properties>
+        <testcase name="Given That there is a bank application browser" classname=";five-transactions-on-the-start-page-//5transaction(lyckas)" time="0.0001173">
+        </testcase>
+        <testcase name="And I have a account as a client" classname=";five-transactions-on-the-start-page-//5transaction(lyckas)" time="0.0000461">
+        </testcase>
+        <testcase name="When I log in with my informations" classname=";five-transactions-on-the-start-page-//5transaction(lyckas)" time="7.611502601">
+        </testcase>
+        <testcase name="Given i Repeated the last scenario for 5 times" classname=";five-transactions-on-the-start-page-//5transaction(lyckas)" time="6.8443791">
+        </testcase>
+        <testcase name="When i surf to my Start page" classname=";five-transactions-on-the-start-page-//5transaction(lyckas)" time="1.642100299">
+        </testcase>
+        <testcase name="Then I should be able to see my last five transactions for my accounts" classname=";five-transactions-on-the-start-page-//5transaction(lyckas)" time="6.613954399">
+        </testcase>
+    </testsuite>
+    <testsuite name=";10-or-more-transactions-on-my-account-page-//-10-transaction-(lyckas)" tests="8" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
+            </property>
+        </properties>
+        <testcase name="Given That there is a bank application browser" classname=";10-or-more-transactions-on-my-account-page-//-10-transaction-(lyckas)" time="0.0001206">
+        </testcase>
+        <testcase name="And I have a account as a client" classname=";10-or-more-transactions-on-my-account-page-//-10-transaction-(lyckas)" time="0.0000744">
+        </testcase>
+        <testcase name="When I log in with my informations" classname=";10-or-more-transactions-on-my-account-page-//-10-transaction-(lyckas)" time="7.528565301">
+        </testcase>
+        <testcase name="Given i repeated transaction between my accounts for 7 times more" classname=";10-or-more-transactions-on-my-account-page-//-10-transaction-(lyckas)" time="8.842021599">
+        </testcase>
+        <testcase name="When I am on my account page" classname=";10-or-more-transactions-on-my-account-page-//-10-transaction-(lyckas)" time="1.033088001">
+        </testcase>
+        <testcase name="And i click on my account Lönekonto" classname=";10-or-more-transactions-on-my-account-page-//-10-transaction-(lyckas)" time="2.012409001">
+        </testcase>
+        <testcase name="And then clicked on the Show more button" classname=";10-or-more-transactions-on-my-account-page-//-10-transaction-(lyckas)" time="0.631588699">
+        </testcase>
+        <testcase name="Then I should see my last 10 transactions for my accounts" classname=";10-or-more-transactions-on-my-account-page-//-10-transaction-(lyckas)" time="1.412631499">
+        </testcase>
+    </testsuite>
+    <testsuite name=";warninig-massege-when-your-transfer-more-than-30000-//övergränsen-(lyckas)" tests="9" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
+            </property>
+        </properties>
+        <testcase name="Given That there is a bank application browser" classname=";warninig-massege-when-your-transfer-more-than-30000-//övergränsen-(lyckas)" time="0.000090099">
+        </testcase>
+        <testcase name="And I have a account as a client" classname=";warninig-massege-when-your-transfer-more-than-30000-//övergränsen-(lyckas)" time="0.0000586">
+        </testcase>
+        <testcase name="When I log in with my informations" classname=";warninig-massege-when-your-transfer-more-than-30000-//övergränsen-(lyckas)" time="7.294438301">
+        </testcase>
+        <testcase name="Given i have enough money in my Lönekonto" classname=";warninig-massege-when-your-transfer-more-than-30000-//övergränsen-(lyckas)" time="2.060397199">
+        </testcase>
+        <testcase name="When i surf to Transfer money to another account page" classname=";warninig-massege-when-your-transfer-more-than-30000-//övergränsen-(lyckas)" time="2.0600686">
+        </testcase>
+        <testcase name="And i choose Annat Konot" classname=";warninig-massege-when-your-transfer-more-than-30000-//övergränsen-(lyckas)" time="1.0146618">
+        </testcase>
+        <testcase name="And i choose the reciver account number" classname=";warninig-massege-when-your-transfer-more-than-30000-//övergränsen-(lyckas)" time="1.1488059">
+        </testcase>
+        <testcase name="And i a bigger sum than thirty thousends" classname=";warninig-massege-when-your-transfer-more-than-30000-//övergränsen-(lyckas)" time="2.6186402">
+        </testcase>
+        <testcase name="Then transaction should not go through and i should get a warning" classname=";warninig-massege-when-your-transfer-more-than-30000-//övergränsen-(lyckas)" time="1.621561801">
+        </testcase>
+    </testsuite>
+    <testsuite name=";making-a-card-withdraw-//uttag-(lyckas)" tests="9" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
+            </property>
+        </properties>
+        <testcase name="Given That there is a bank application browser" classname=";making-a-card-withdraw-//uttag-(lyckas)" time="0.000090899">
+        </testcase>
+        <testcase name="And I have a account as a client" classname=";making-a-card-withdraw-//uttag-(lyckas)" time="0.0000471">
+        </testcase>
+        <testcase name="When I log in with my informations" classname=";making-a-card-withdraw-//uttag-(lyckas)" time="7.3879251">
+        </testcase>
+        <testcase name="When i Am on the simulating page" classname=";making-a-card-withdraw-//uttag-(lyckas)" time="1.053711699">
+        </testcase>
+        <testcase name="And i enter the 10 as sum" classname=";making-a-card-withdraw-//uttag-(lyckas)" time="2.0140292">
+        </testcase>
+        <testcase name="And chose Uttag" classname=";making-a-card-withdraw-//uttag-(lyckas)" time="0.0142983">
+        </testcase>
+        <testcase name="And submit my transaction" classname=";making-a-card-withdraw-//uttag-(lyckas)" time="0.000443599">
+        </testcase>
+        <testcase name="When am on the Start page" classname=";making-a-card-withdraw-//uttag-(lyckas)" time="1.7289322">
+        </testcase>
+        <testcase name="Then i can see the new balance of my account" classname=";making-a-card-withdraw-//uttag-(lyckas)" time="2.4907662">
+        </testcase>
+    </testsuite>
+    <testsuite name=";pg-payment" tests="5" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
+            </property>
+        </properties>
+        <testcase name="Given That there is a bank application browser" classname=";pg-payment" time="0.0001049">
+        </testcase>
+        <testcase name="And I have a account as a client" classname=";pg-payment" time="0.0000583">
+        </testcase>
+        <testcase name="When I log in with my informations" classname=";pg-payment" time="7.473346801">
+        </testcase>
+        <testcase name="Given I choose PG payment to account number" classname=";pg-payment" time="11.389717301">
+        </testcase>
+        <testcase name="Then I should be able to pay the chosen sum" classname=";pg-payment" time="3.835934001">
+        </testcase>
+    </testsuite>
+    <testsuite name=";change-the-name-of-the-account" tests="7" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
+            </property>
+        </properties>
+        <testcase name="Given That there is a bank application browser" classname=";change-the-name-of-the-account" time="0.0001009">
+        </testcase>
+        <testcase name="And I have a account as a client" classname=";change-the-name-of-the-account" time="0.000061101">
+        </testcase>
+        <testcase name="When I log in with my informations" classname=";change-the-name-of-the-account" time="7.379368599">
+        </testcase>
+        <testcase name="When i surf to my account" classname=";change-the-name-of-the-account" time="1.0459878">
+        </testcase>
+        <testcase name="And click on LäggTill" classname=";change-the-name-of-the-account" time="0.013505501">
+        </testcase>
+        <testcase name="And i chose to name the account mynewaccount" classname=";change-the-name-of-the-account" time="2.7267887">
+        </testcase>
+        <testcase name="Then I should be able to see the new account on the same page" classname=";change-the-name-of-the-account" time="3.404041501">
+        </testcase>
+    </testsuite>
+    <testsuite name=";deleting-an-account-//tabortkonto" tests="6" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
+            </property>
+        </properties>
+        <testcase name="Given That there is a bank application browser" classname=";deleting-an-account-//tabortkonto" time="0.000096801">
+        </testcase>
+        <testcase name="And I have a account as a client" classname=";deleting-an-account-//tabortkonto" time="0.0000562">
+        </testcase>
+        <testcase name="When I log in with my informations" classname=";deleting-an-account-//tabortkonto" time="7.2917362">
+        </testcase>
+        <testcase name="When am on Myaccounts page" classname=";deleting-an-account-//tabortkonto" time="1.684387699">
+        </testcase>
+        <testcase name="And click on Tabort Konto on the side of my mynewaccount2 account" classname=";deleting-an-account-//tabortkonto" time="2.015373301">
+        </testcase>
+        <testcase name="Then I should be able to see that the account has been deleted" classname=";deleting-an-account-//tabortkonto" time="6.460989201">
         </testcase>
     </testsuite>
 </testsuites>

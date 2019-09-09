@@ -109,13 +109,14 @@ module.exports = function () {
             moduleName: 'skaffa ett nytt konto',
           });
             
-          await ares.endTests();
+           
     });
 
     this.When(/^i surf to the simulating page$/, async function () {
         
         await helpers.loadPage('http://localhost:3000/#simulate');
         await sleep(1000);
+       
         
 
     });
@@ -161,7 +162,7 @@ module.exports = function () {
             moduleName: 'sätta in pengar',
           });
 
-          await ares.endTests();
+           
       
 
 
@@ -236,6 +237,7 @@ module.exports = function () {
     this.When(/^i Am on the simulating page$/, async function () {
         await helpers.loadPage('http://localhost:3000/#simulate');
         await sleep(1000);
+        //await ares.startTests()
 
     });
     this.When(/^i enter the 10 as sum$/, async function () {
@@ -284,13 +286,13 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'uttag',
           });
-          await ares.endTests();
+           
     });
 
     //sc5
 
     this.Given(/^i Repeated the last scenario for 5 times$/, async function () {
-        
+        //await ares.startTests()
         x = 0;
         while (x != 5) {
             await helpers.loadPage('http://localhost:3000/#transfermyaccount');
@@ -349,7 +351,7 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: '5transactions',
           });
-          await ares.endTests();
+           
 
     });
     //sc6
@@ -412,7 +414,7 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: '10transactions',
           });
-          await ares.endTests();
+           
 
             
     });
@@ -461,7 +463,7 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'changeName',
           });
-          await ares.endTests();
+           
     });
     
 
@@ -501,7 +503,7 @@ module.exports = function () {
         await sleep(1000);
         await ares.startModule
         ({ 
-          moduleName: 'ta bort konto',
+          moduleName: 'tabort konto',
           totalTests: 1
         });
     }
@@ -530,15 +532,15 @@ module.exports = function () {
         assert(count == null, 'we can not find your new account')
 
         await ares.testResult({ // skicka resultatet till testrapporten
-            moduleName: 'ta bort konto',
+            moduleName: 'tabort konto',
             title: 'kan jag ta bort konto',
             passed: true, // HÄR skickar jag in mitt resultat ifrån t ex Selenium
             errorMessage: 'jag kan ej ta bort kontot!'
           });
           await ares.endModule({ // avslutar vi denna testrapport
-            moduleName: 'ta bort konto',
+            moduleName: 'tabort konto',
           });
-          await ares.endTests();
+           await ares.endTests()
     });
 
 
@@ -590,7 +592,7 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: ' överfora till andra',
           });
-          await ares.endTests();
+           
     });
 
     //sc11.1
@@ -653,6 +655,7 @@ module.exports = function () {
          
         await helpers.loadPage('http://localhost:3000/#start');
         await sleep(2000);
+        //await ares.startTests()
 
 
         tdWithBalance = await driver.findElement(by.css('body > main > div > article > section.only-if-logged-in.accounts-start.row.px-2 > table > tbody > tr:nth-child(1) > td.text-right'));
@@ -716,11 +719,11 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'PG betalning',
           });
-          await ares.endTests();
+           
     });
     //sc14
     this.Given(/^i have enough money in my Lönekonto$/, async function () {
-        await ares.startTests()
+        
         await helpers.loadPage('http://localhost:3000/#start');
         await sleep(2000);
         tdWithBalance = await driver.findElement(by.xpath('/html/body/main/div/article/section[2]/table/tbody/tr[1]/td[2]'));
@@ -780,7 +783,7 @@ module.exports = function () {
           await ares.endModule({ // avslutar vi denna testrapport
             moduleName: 'över gränsen',
           });
-          await ares.endTests();
+           
     });
 
   
