@@ -1,200 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name=";logginig-in" tests="7" failures="0" skipped="0">
+    <testsuite name=";pg-payment" tests="5" failures="1" skipped="1">
         <properties>
             <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
             </property>
         </properties>
-        <testcase name="Given That there is a bank application browser" classname=";logginig-in" time="0.002804201">
+        <testcase name="Given That there is a bank application browser" classname=";pg-payment" time="0.002702401">
         </testcase>
-        <testcase name="And I have a account as a client" classname=";logginig-in" time="0.000130401">
+        <testcase name="And I have a account as a client" classname=";pg-payment" time="0.0001143">
         </testcase>
-        <testcase name="When I log in with my informations" classname=";logginig-in" time="7.9468926">
+        <testcase name="When I log in with my informations" classname=";pg-payment" time="7.8134307">
         </testcase>
-        <testcase name="When am logged in as Mohammed" classname=";logginig-in" time="1.691332199">
+        <testcase name="Given I choose PG payment to account number" classname=";pg-payment" time="8.798703">
+            <failure message="NoSuchAlertError: no such alert">NoSuchAlertError: no such alert
+  (Session info: chrome=76.0.3809.132)
+  (Driver info: chromedriver=76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}),platform=Windows NT 10.0.17763 x86_64)
+    at Object.checkLegacyResponse (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\node_modules\selenium-webdriver\lib\error.js:529:15)
+    at parseHttpResponse (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\node_modules\selenium-webdriver\lib\http.js:509:13)
+    at doSend.then.response (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\node_modules\selenium-webdriver\lib\http.js:441:30)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+From: Task: WebDriver.switchTo().alert()
+    at thenableWebDriverProxy.schedule (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
+    at TargetLocator.alert (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\node_modules\selenium-webdriver\lib\webdriver.js:1867:29)
+    at createWorld.&lt;anonymous&gt; (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\step-definitions\SwedenBank.js:682:35)</failure>
         </testcase>
-        <testcase name="And i click on Mina konto" classname=";logginig-in" time="1.051754199">
-        </testcase>
-        <testcase name="And chose to create a new account with the name SparingKonto" classname=";logginig-in" time="2.259312001">
-        </testcase>
-        <testcase name="Then i should be able to see my 2 accounts" classname=";logginig-in" time="3.5002787">
-        </testcase>
-    </testsuite>
-    <testsuite name=";puting-in-10k-in-my-lönekonto" tests="8" failures="1" skipped="0">
-        <properties>
-            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
-            </property>
-        </properties>
-        <testcase name="Given That there is a bank application browser" classname=";puting-in-10k-in-my-lönekonto" time="0.000250501">
-        </testcase>
-        <testcase name="And I have a account as a client" classname=";puting-in-10k-in-my-lönekonto" time="0.0000833">
-        </testcase>
-        <testcase name="When I log in with my informations" classname=";puting-in-10k-in-my-lönekonto" time="7.3134313">
-        </testcase>
-        <testcase name="When i surf to the simulating page" classname=";puting-in-10k-in-my-lönekonto" time="1.817310699">
-        </testcase>
-        <testcase name="And i enter the right sum" classname=";puting-in-10k-in-my-lönekonto" time="2.764093">
-        </testcase>
-        <testcase name="And chose Isättning" classname=";puting-in-10k-in-my-lönekonto" time="0.0136568">
-        </testcase>
-        <testcase name="And submited my transaction" classname=";puting-in-10k-in-my-lönekonto" time="0.000296501">
-        </testcase>
-        <testcase name="Then when on the Start page i can see the new balance of my account" classname=";puting-in-10k-in-my-lönekonto" time="1.1852848">
-            <failure message="AssertionError: your transaction did not go through">AssertionError: your transaction did not go through
-    at createWorld.&lt;anonymous&gt; (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\step-definitions\SwedenBank.js:151:9)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
-        </testcase>
-    </testsuite>
-    <testsuite name=";deleting-an-account" tests="6" failures="0" skipped="0">
-        <properties>
-            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
-            </property>
-        </properties>
-        <testcase name="Given That there is a bank application browser" classname=";deleting-an-account" time="0.0001351">
-        </testcase>
-        <testcase name="And I have a account as a client" classname=";deleting-an-account" time="0.000102201">
-        </testcase>
-        <testcase name="When I log in with my informations" classname=";deleting-an-account" time="7.6550746">
-        </testcase>
-        <testcase name="When am on Myaccounts page" classname=";deleting-an-account" time="1.042306799">
-        </testcase>
-        <testcase name="And click on Tabort Konto on the side of my mynewaccount2 account" classname=";deleting-an-account" time="2.822031501">
-        </testcase>
-        <testcase name="Then I should be able to see that the account has been deleted" classname=";deleting-an-account" time="6.4414742">
-        </testcase>
-    </testsuite>
-    <testsuite name=";transfering-money-from-one-of-my-accounts-to-an-other" tests="9" failures="1" skipped="0">
-        <properties>
-            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
-            </property>
-        </properties>
-        <testcase name="Given That there is a bank application browser" classname=";transfering-money-from-one-of-my-accounts-to-an-other" time="0.000118799">
-        </testcase>
-        <testcase name="And I have a account as a client" classname=";transfering-money-from-one-of-my-accounts-to-an-other" time="0.000055499">
-        </testcase>
-        <testcase name="When I log in with my informations" classname=";transfering-money-from-one-of-my-accounts-to-an-other" time="7.2952719">
-        </testcase>
-        <testcase name="Given i have 10K in my löneKonto" classname=";transfering-money-from-one-of-my-accounts-to-an-other" time="0.7921076">
-        </testcase>
-        <testcase name="When i surf to transfermyaccount" classname=";transfering-money-from-one-of-my-accounts-to-an-other" time="2.8500552">
-        </testcase>
-        <testcase name="And i chose the sum i want to send" classname=";transfering-money-from-one-of-my-accounts-to-an-other" time="0.062200899">
-        </testcase>
-        <testcase name="And the account that we want to recive the money as Sparingkonto" classname=";transfering-money-from-one-of-my-accounts-to-an-other" time="0.133157699">
-        </testcase>
-        <testcase name="And click on Utför to submit the transaction" classname=";transfering-money-from-one-of-my-accounts-to-an-other" time="1.016673401">
-        </testcase>
-        <testcase name="Then i should be able to see the new balance for the 2 accounts correctly" classname=";transfering-money-from-one-of-my-accounts-to-an-other" time="1.066835899">
-            <failure message="AssertionError: no can do">AssertionError: no can do
-    at createWorld.&lt;anonymous&gt; (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\step-definitions\SwedenBank.js:219:9)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
-        </testcase>
-    </testsuite>
-    <testsuite name=";five-transactions-on-the-start-page" tests="6" failures="1" skipped="0">
-        <properties>
-            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
-            </property>
-        </properties>
-        <testcase name="Given That there is a bank application browser" classname=";five-transactions-on-the-start-page" time="0.0009339">
-        </testcase>
-        <testcase name="And I have a account as a client" classname=";five-transactions-on-the-start-page" time="0.0000721">
-        </testcase>
-        <testcase name="When I log in with my informations" classname=";five-transactions-on-the-start-page" time="7.2640744">
-        </testcase>
-        <testcase name="Given i Repeated the last scenario for 5 times" classname=";five-transactions-on-the-start-page" time="6.0999157">
-        </testcase>
-        <testcase name="When i surf to my Start page" classname=";five-transactions-on-the-start-page" time="1.814995199">
-        </testcase>
-        <testcase name="Then I should be able to see my last five transactions for my accounts" classname=";five-transactions-on-the-start-page" time="0.0218872">
-            <failure message="AssertionError: Not five lines in transactions!: expected 1 to equal 6">AssertionError: Not five lines in transactions!: expected 1 to equal 6
-    at createWorld.&lt;anonymous&gt; (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\step-definitions\SwedenBank.js:329:16)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
-        </testcase>
-    </testsuite>
-    <testsuite name=";10-or-more-transactions-on-my-account-page" tests="8" failures="1" skipped="0">
-        <properties>
-            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
-            </property>
-        </properties>
-        <testcase name="Given That there is a bank application browser" classname=";10-or-more-transactions-on-my-account-page" time="0.0000983">
-        </testcase>
-        <testcase name="And I have a account as a client" classname=";10-or-more-transactions-on-my-account-page" time="0.000058499">
-        </testcase>
-        <testcase name="When I log in with my informations" classname=";10-or-more-transactions-on-my-account-page" time="7.2246512">
-        </testcase>
-        <testcase name="Given i repeated transaction between my accounts for 7 times more" classname=";10-or-more-transactions-on-my-account-page" time="8.4863495">
-        </testcase>
-        <testcase name="When I am on my account page" classname=";10-or-more-transactions-on-my-account-page" time="1.051662399">
-        </testcase>
-        <testcase name="And i click on my account Lönekonto" classname=";10-or-more-transactions-on-my-account-page" time="2.0138802">
-        </testcase>
-        <testcase name="And then clicked on the Show more button" classname=";10-or-more-transactions-on-my-account-page" time="0.7526326">
-        </testcase>
-        <testcase name="Then I should see my last 10 transactions for my accounts" classname=";10-or-more-transactions-on-my-account-page" time="0.012447">
-            <failure message="AssertionError: cant see all the rows">AssertionError: cant see all the rows
-    at createWorld.&lt;anonymous&gt; (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\step-definitions\SwedenBank.js:402:9)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
-        </testcase>
-    </testsuite>
-    <testsuite name=";warninig-massege-when-your-transfer-more-than-30000" tests="9" failures="1" skipped="5">
-        <properties>
-            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
-            </property>
-        </properties>
-        <testcase name="Given That there is a bank application browser" classname=";warninig-massege-when-your-transfer-more-than-30000" time="0.000130099">
-        </testcase>
-        <testcase name="And I have a account as a client" classname=";warninig-massege-when-your-transfer-more-than-30000" time="0.0000654">
-        </testcase>
-        <testcase name="When I log in with my informations" classname=";warninig-massege-when-your-transfer-more-than-30000" time="7.842409">
-        </testcase>
-        <testcase name="Given i have enough money in my Lönekonto" classname=";warninig-massege-when-your-transfer-more-than-30000" time="2.7213343">
-            <failure message="TypeError: Cannot read property &apos;0&apos; of undefined">TypeError: Cannot read property &apos;0&apos; of undefined
-    at Function.startTests (C:\Users\Lenovo\Desktop\EC\New folder\Bank-master\node_modules\ares-helper\index.js:104:41)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
-        </testcase>
-        <testcase name="When i surf to Transfer money to another account page" classname=";warninig-massege-when-your-transfer-more-than-30000">
+        <testcase name="Then I should be able to pay the chosen sum" classname=";pg-payment">
             <skipped message="">
             </skipped>
-        </testcase>
-        <testcase name="And i choose Annat Konot" classname=";warninig-massege-when-your-transfer-more-than-30000">
-            <skipped message="">
-            </skipped>
-        </testcase>
-        <testcase name="And i choose the reciver account number" classname=";warninig-massege-when-your-transfer-more-than-30000">
-            <skipped message="">
-            </skipped>
-        </testcase>
-        <testcase name="And i a bigger sum than thirty thousends" classname=";warninig-massege-when-your-transfer-more-than-30000">
-            <skipped message="">
-            </skipped>
-        </testcase>
-        <testcase name="Then transaction should not go through and i should get a warning" classname=";warninig-massege-when-your-transfer-more-than-30000">
-            <skipped message="">
-            </skipped>
-        </testcase>
-    </testsuite>
-    <testsuite name=";making-a-card-withdraw" tests="9" failures="0" skipped="0">
-        <properties>
-            <property name="URI" value="C:/Users/Lenovo/Desktop/EC/New folder/Bank-master/features/Clients.feature">
-            </property>
-        </properties>
-        <testcase name="Given That there is a bank application browser" classname=";making-a-card-withdraw" time="0.0001552">
-        </testcase>
-        <testcase name="And I have a account as a client" classname=";making-a-card-withdraw" time="0.000074599">
-        </testcase>
-        <testcase name="When I log in with my informations" classname=";making-a-card-withdraw" time="7.245981999">
-        </testcase>
-        <testcase name="When i Am on the simulating page" classname=";making-a-card-withdraw" time="1.0470756">
-        </testcase>
-        <testcase name="And i enter the 10 as sum" classname=";making-a-card-withdraw" time="2.0140042">
-        </testcase>
-        <testcase name="And chose Uttag" classname=";making-a-card-withdraw" time="0.0132038">
-        </testcase>
-        <testcase name="And submit my transaction" classname=";making-a-card-withdraw" time="0.000325101">
-        </testcase>
-        <testcase name="When am on the Start page" classname=";making-a-card-withdraw" time="1.9431926">
-        </testcase>
-        <testcase name="Then i can see the new balance of my account" classname=";making-a-card-withdraw" time="3.580589799">
         </testcase>
     </testsuite>
 </testsuites>
