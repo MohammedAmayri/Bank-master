@@ -21,8 +21,6 @@ And submited my transaction
 Then when on the Start page i can see the new balance of my account 
 
 
-
-
 Scenario: Transfering money from one of my accounts to an other //överforing(lyckas)
 Given i have 10K in my löneKonto
 When i surf to transfermyaccount

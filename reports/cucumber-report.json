@@ -14,7 +14,7 @@
             "name": "That there is a bank application browser",
             "result": {
               "status": "passed",
-              "duration": 2894900
+              "duration": 2583900
             },
             "line": 5,
             "match": {
@@ -27,7 +27,7 @@
             "name": "I have a account as a client",
             "result": {
               "status": "passed",
-              "duration": 116699
+              "duration": 217000
             },
             "line": 6,
             "match": {
@@ -40,7 +40,7 @@
             "name": "I log in with my informations",
             "result": {
               "status": "passed",
-              "duration": 8187795801
+              "duration": 8509949701
             },
             "line": 7,
             "match": {
@@ -53,7 +53,7 @@
             "name": "am logged in as Mohammed",
             "result": {
               "status": "passed",
-              "duration": 1478477900
+              "duration": 1992215099
             },
             "line": 11,
             "match": {
@@ -66,7 +66,7 @@
             "name": "i click on Mina konto",
             "result": {
               "status": "passed",
-              "duration": 1049757899
+              "duration": 1123195500
             },
             "line": 12,
             "match": {
@@ -79,7 +79,7 @@
             "name": "chose to create a new account with the name SparingKonto",
             "result": {
               "status": "passed",
-              "duration": 2215540400
+              "duration": 2434983400
             },
             "line": 13,
             "match": {
@@ -92,7 +92,7 @@
             "name": "i should be able to see my 2 accounts",
             "result": {
               "status": "passed",
-              "duration": 2614912400
+              "duration": 3081037901
             },
             "line": 14,
             "match": {
@@ -104,7 +104,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 139669000
+              "duration": 211740399
             },
             "hidden": true,
             "match": {
@@ -127,7 +127,7 @@
             "name": "That there is a bank application browser",
             "result": {
               "status": "passed",
-              "duration": 150600
+              "duration": 166700
             },
             "line": 5,
             "match": {
@@ -140,7 +140,7 @@
             "name": "I have a account as a client",
             "result": {
               "status": "passed",
-              "duration": 52299
+              "duration": 67800
             },
             "line": 6,
             "match": {
@@ -153,7 +153,7 @@
             "name": "I log in with my informations",
             "result": {
               "status": "passed",
-              "duration": 7123343000
+              "duration": 8602635700
             },
             "line": 7,
             "match": {
@@ -166,7 +166,7 @@
             "name": "i surf to the simulating page",
             "result": {
               "status": "passed",
-              "duration": 1046014899
+              "duration": 1090131700
             },
             "line": 17,
             "match": {
@@ -179,7 +179,7 @@
             "name": "i enter the right sum",
             "result": {
               "status": "passed",
-              "duration": 2629649301
+              "duration": 2953037400
             },
             "line": 18,
             "match": {
@@ -192,7 +192,7 @@
             "name": "chose Isättning",
             "result": {
               "status": "passed",
-              "duration": 13334401
+              "duration": 16347800
             },
             "line": 19,
             "match": {
@@ -205,7 +205,7 @@
             "name": "submited my transaction",
             "result": {
               "status": "passed",
-              "duration": 308500
+              "duration": 531500
             },
             "line": 20,
             "match": {
@@ -218,7 +218,7 @@
             "name": "when on the Start page i can see the new balance of my account",
             "result": {
               "status": "passed",
-              "duration": 2957795100
+              "duration": 3155869700
             },
             "line": 21,
             "match": {
@@ -230,7 +230,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 138994500
+              "duration": 192125900
             },
             "hidden": true,
             "match": {
@@ -244,7 +244,7 @@
       {
         "id": ";transfering-money-from-one-of-my-accounts-to-an-other-//överforing(lyckas)",
         "keyword": "Scenario",
-        "line": 26,
+        "line": 24,
         "name": "Transfering money from one of my accounts to an other //överforing(lyckas)",
         "steps": [
           {
@@ -253,7 +253,7 @@
             "name": "That there is a bank application browser",
             "result": {
               "status": "passed",
-              "duration": 132899
+              "duration": 146999
             },
             "line": 5,
             "match": {
@@ -266,7 +266,7 @@
             "name": "I have a account as a client",
             "result": {
               "status": "passed",
-              "duration": 77100
+              "duration": 48501
             },
             "line": 6,
             "match": {
@@ -279,7 +279,7 @@
             "name": "I log in with my informations",
             "result": {
               "status": "passed",
-              "duration": 9321316001
+              "duration": 7242136300
             },
             "line": 7,
             "match": {
@@ -292,9 +292,9 @@
             "name": "i have 10K in my löneKonto",
             "result": {
               "status": "passed",
-              "duration": 103501
+              "duration": 320200
             },
-            "line": 27,
+            "line": 25,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:173"
             }
@@ -305,9 +305,9 @@
             "name": "i surf to transfermyaccount",
             "result": {
               "status": "passed",
-              "duration": 2752288801
+              "duration": 3005429000
             },
-            "line": 28,
+            "line": 26,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:177"
             }
@@ -318,9 +318,9 @@
             "name": "i chose the sum i want to send",
             "result": {
               "status": "passed",
-              "duration": 70023400
+              "duration": 114659699
             },
-            "line": 29,
+            "line": 27,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:194"
             }
@@ -331,9 +331,9 @@
             "name": "the account that we want to recive the money as Sparingkonto",
             "result": {
               "status": "passed",
-              "duration": 139729100
+              "duration": 163717699
             },
-            "line": 30,
+            "line": 28,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:200"
             }
@@ -344,9 +344,9 @@
             "name": "click on Utför to submit the transaction",
             "result": {
               "status": "passed",
-              "duration": 1036866700
+              "duration": 1032380199
             },
-            "line": 31,
+            "line": 29,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:207"
             }
@@ -357,9 +357,9 @@
             "name": "i should be able to see the new balance for the 2 accounts correctly",
             "result": {
               "status": "passed",
-              "duration": 4852639800
+              "duration": 5128577300
             },
-            "line": 32,
+            "line": 30,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:212"
             }
@@ -369,7 +369,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 139920600
+              "duration": 349638300
             },
             "hidden": true,
             "match": {
@@ -383,7 +383,7 @@
       {
         "id": ";five-transactions-on-the-start-page-//5transaction(lyckas)",
         "keyword": "Scenario",
-        "line": 34,
+        "line": 32,
         "name": "five transactions on the start page //5transaction(lyckas)",
         "steps": [
           {
@@ -392,7 +392,7 @@
             "name": "That there is a bank application browser",
             "result": {
               "status": "passed",
-              "duration": 117300
+              "duration": 121500
             },
             "line": 5,
             "match": {
@@ -405,7 +405,7 @@
             "name": "I have a account as a client",
             "result": {
               "status": "passed",
-              "duration": 46100
+              "duration": 46700
             },
             "line": 6,
             "match": {
@@ -418,7 +418,7 @@
             "name": "I log in with my informations",
             "result": {
               "status": "passed",
-              "duration": 7611502601
+              "duration": 7437975999
             },
             "line": 7,
             "match": {
@@ -431,9 +431,9 @@
             "name": "i Repeated the last scenario for 5 times",
             "result": {
               "status": "passed",
-              "duration": 6844379100
+              "duration": 6701356901
             },
-            "line": 35,
+            "line": 33,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:294"
             }
@@ -444,9 +444,9 @@
             "name": "i surf to my Start page",
             "result": {
               "status": "passed",
-              "duration": 1642100299
+              "duration": 1974866100
             },
-            "line": 36,
+            "line": 34,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:317"
             }
@@ -457,9 +457,9 @@
             "name": "I should be able to see my last five transactions for my accounts",
             "result": {
               "status": "passed",
-              "duration": 6613954399
+              "duration": 5835700399
             },
-            "line": 37,
+            "line": 35,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:329"
             }
@@ -469,7 +469,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 178889500
+              "duration": 245775499
             },
             "hidden": true,
             "match": {
@@ -483,7 +483,7 @@
       {
         "id": ";10-or-more-transactions-on-my-account-page-//-10-transaction-(lyckas)",
         "keyword": "Scenario",
-        "line": 39,
+        "line": 37,
         "name": "10 or more transactions on my account page // 10 transaction (lyckas)",
         "steps": [
           {
@@ -492,7 +492,7 @@
             "name": "That there is a bank application browser",
             "result": {
               "status": "passed",
-              "duration": 120600
+              "duration": 177399
             },
             "line": 5,
             "match": {
@@ -505,7 +505,7 @@
             "name": "I have a account as a client",
             "result": {
               "status": "passed",
-              "duration": 74400
+              "duration": 94600
             },
             "line": 6,
             "match": {
@@ -518,7 +518,7 @@
             "name": "I log in with my informations",
             "result": {
               "status": "passed",
-              "duration": 7528565301
+              "duration": 8231451900
             },
             "line": 7,
             "match": {
@@ -531,9 +531,9 @@
             "name": "i repeated transaction between my accounts for 7 times more",
             "result": {
               "status": "passed",
-              "duration": 8842021599
+              "duration": 9305055800
             },
-            "line": 40,
+            "line": 38,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:359"
             }
@@ -544,9 +544,9 @@
             "name": "I am on my account page",
             "result": {
               "status": "passed",
-              "duration": 1033088001
+              "duration": 1090605000
             },
-            "line": 41,
+            "line": 39,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:382"
             }
@@ -557,9 +557,9 @@
             "name": "i click on my account Lönekonto",
             "result": {
               "status": "passed",
-              "duration": 2012409001
+              "duration": 2059945200
             },
-            "line": 42,
+            "line": 40,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:385"
             }
@@ -570,9 +570,9 @@
             "name": "then clicked on the Show more button",
             "result": {
               "status": "passed",
-              "duration": 631588699
+              "duration": 937494701
             },
-            "line": 43,
+            "line": 41,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:390"
             }
@@ -583,9 +583,9 @@
             "name": "I should see my last 10 transactions for my accounts",
             "result": {
               "status": "passed",
-              "duration": 1412631499
+              "duration": 1935331400
             },
-            "line": 44,
+            "line": 42,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:403"
             }
@@ -595,7 +595,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 143803400
+              "duration": 199506301
             },
             "hidden": true,
             "match": {
@@ -609,7 +609,7 @@
       {
         "id": ";warninig-massege-when-your-transfer-more-than-30000-//övergränsen-(lyckas)",
         "keyword": "Scenario",
-        "line": 46,
+        "line": 44,
         "name": "warninig massege when your transfer more than 30000 //övergränsen (lyckas)",
         "steps": [
           {
@@ -618,7 +618,7 @@
             "name": "That there is a bank application browser",
             "result": {
               "status": "passed",
-              "duration": 90099
+              "duration": 90600
             },
             "line": 5,
             "match": {
@@ -631,7 +631,7 @@
             "name": "I have a account as a client",
             "result": {
               "status": "passed",
-              "duration": 58600
+              "duration": 49701
             },
             "line": 6,
             "match": {
@@ -644,7 +644,7 @@
             "name": "I log in with my informations",
             "result": {
               "status": "passed",
-              "duration": 7294438301
+              "duration": 7308423599
             },
             "line": 7,
             "match": {
@@ -657,9 +657,9 @@
             "name": "i have enough money in my Lönekonto",
             "result": {
               "status": "passed",
-              "duration": 2060397199
+              "duration": 2190093200
             },
-            "line": 47,
+            "line": 45,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:725"
             }
@@ -670,9 +670,9 @@
             "name": "i surf to Transfer money to another account page",
             "result": {
               "status": "passed",
-              "duration": 2060068600
+              "duration": 2109710000
             },
-            "line": 48,
+            "line": 46,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:739"
             }
@@ -683,9 +683,9 @@
             "name": "i choose Annat Konot",
             "result": {
               "status": "passed",
-              "duration": 1014661800
+              "duration": 1055206700
             },
-            "line": 49,
+            "line": 47,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:744"
             }
@@ -696,9 +696,9 @@
             "name": "i choose the reciver account number",
             "result": {
               "status": "passed",
-              "duration": 1148805900
+              "duration": 1374153799
             },
-            "line": 50,
+            "line": 48,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:749"
             }
@@ -709,9 +709,9 @@
             "name": "i a bigger sum than thirty thousends",
             "result": {
               "status": "passed",
-              "duration": 2618640200
+              "duration": 2911695000
             },
-            "line": 51,
+            "line": 49,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:755"
             }
@@ -722,9 +722,9 @@
             "name": "transaction should not go through and i should get a warning",
             "result": {
               "status": "passed",
-              "duration": 1621561801
+              "duration": 1859936601
             },
-            "line": 52,
+            "line": 50,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:772"
             }
@@ -734,7 +734,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 178661099
+              "duration": 178063700
             },
             "hidden": true,
             "match": {
@@ -748,7 +748,7 @@
       {
         "id": ";making-a-card-withdraw-//uttag-(lyckas)",
         "keyword": "Scenario",
-        "line": 54,
+        "line": 52,
         "name": "Making a Card withdraw //uttag (lyckas)",
         "steps": [
           {
@@ -757,7 +757,7 @@
             "name": "That there is a bank application browser",
             "result": {
               "status": "passed",
-              "duration": 90899
+              "duration": 126901
             },
             "line": 5,
             "match": {
@@ -770,7 +770,7 @@
             "name": "I have a account as a client",
             "result": {
               "status": "passed",
-              "duration": 47100
+              "duration": 59200
             },
             "line": 6,
             "match": {
@@ -783,7 +783,7 @@
             "name": "I log in with my informations",
             "result": {
               "status": "passed",
-              "duration": 7387925100
+              "duration": 8174806999
             },
             "line": 7,
             "match": {
@@ -796,9 +796,9 @@
             "name": "i Am on the simulating page",
             "result": {
               "status": "passed",
-              "duration": 1053711699
+              "duration": 1121878899
             },
-            "line": 55,
+            "line": 53,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:237"
             }
@@ -809,9 +809,9 @@
             "name": "i enter the 10 as sum",
             "result": {
               "status": "passed",
-              "duration": 2014029200
+              "duration": 2058120900
             },
-            "line": 56,
+            "line": 54,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:243"
             }
@@ -822,9 +822,9 @@
             "name": "chose Uttag",
             "result": {
               "status": "passed",
-              "duration": 14298300
+              "duration": 30704700
             },
-            "line": 57,
+            "line": 55,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:250"
             }
@@ -835,9 +835,9 @@
             "name": "submit my transaction",
             "result": {
               "status": "passed",
-              "duration": 443599
+              "duration": 626800
             },
-            "line": 58,
+            "line": 56,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:256"
             }
@@ -848,9 +848,9 @@
             "name": "am on the Start page",
             "result": {
               "status": "passed",
-              "duration": 1728932200
+              "duration": 2027081000
             },
-            "line": 59,
+            "line": 57,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:259"
             }
@@ -861,9 +861,9 @@
             "name": "i can see the new balance of my account",
             "result": {
               "status": "passed",
-              "duration": 2490766200
+              "duration": 2975359901
             },
-            "line": 60,
+            "line": 58,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:269"
             }
@@ -873,7 +873,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 148618100
+              "duration": 204961599
             },
             "hidden": true,
             "match": {
@@ -887,7 +887,7 @@
       {
         "id": ";pg-payment",
         "keyword": "Scenario",
-        "line": 62,
+        "line": 60,
         "name": "PG payment",
         "steps": [
           {
@@ -896,7 +896,7 @@
             "name": "That there is a bank application browser",
             "result": {
               "status": "passed",
-              "duration": 104900
+              "duration": 167201
             },
             "line": 5,
             "match": {
@@ -909,7 +909,7 @@
             "name": "I have a account as a client",
             "result": {
               "status": "passed",
-              "duration": 58300
+              "duration": 89100
             },
             "line": 6,
             "match": {
@@ -922,7 +922,7 @@
             "name": "I log in with my informations",
             "result": {
               "status": "passed",
-              "duration": 7473346801
+              "duration": 7813494800
             },
             "line": 7,
             "match": {
@@ -935,9 +935,9 @@
             "name": "I choose PG payment to account number",
             "result": {
               "status": "passed",
-              "duration": 11389717301
+              "duration": 11893603401
             },
-            "line": 63,
+            "line": 61,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:654"
             }
@@ -948,9 +948,9 @@
             "name": "I should be able to pay the chosen sum",
             "result": {
               "status": "passed",
-              "duration": 3835934001
+              "duration": 4338513600
             },
-            "line": 64,
+            "line": 62,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:697"
             }
@@ -960,7 +960,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 141145301
+              "duration": 190534300
             },
             "hidden": true,
             "match": {
@@ -974,7 +974,7 @@
       {
         "id": ";change-the-name-of-the-account",
         "keyword": "Scenario",
-        "line": 66,
+        "line": 64,
         "name": "Change the name of the account",
         "steps": [
           {
@@ -983,7 +983,7 @@
             "name": "That there is a bank application browser",
             "result": {
               "status": "passed",
-              "duration": 100900
+              "duration": 107600
             },
             "line": 5,
             "match": {
@@ -996,7 +996,7 @@
             "name": "I have a account as a client",
             "result": {
               "status": "passed",
-              "duration": 61101
+              "duration": 51000
             },
             "line": 6,
             "match": {
@@ -1009,7 +1009,7 @@
             "name": "I log in with my informations",
             "result": {
               "status": "passed",
-              "duration": 7379368599
+              "duration": 7341204399
             },
             "line": 7,
             "match": {
@@ -1022,9 +1022,9 @@
             "name": "i surf to my account",
             "result": {
               "status": "passed",
-              "duration": 1045987800
+              "duration": 1044970500
             },
-            "line": 67,
+            "line": 65,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:423"
             }
@@ -1035,9 +1035,9 @@
             "name": "click on LäggTill",
             "result": {
               "status": "passed",
-              "duration": 13505501
+              "duration": 15079000
             },
-            "line": 68,
+            "line": 66,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:428"
             }
@@ -1048,9 +1048,9 @@
             "name": "i chose to name the account mynewaccount",
             "result": {
               "status": "passed",
-              "duration": 2726788700
+              "duration": 2999791201
             },
-            "line": 69,
+            "line": 67,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:434"
             }
@@ -1061,9 +1061,9 @@
             "name": "I should be able to see the new account on the same page",
             "result": {
               "status": "passed",
-              "duration": 3404041501
+              "duration": 2883315301
             },
-            "line": 70,
+            "line": 68,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:449"
             }
@@ -1073,7 +1073,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 142107900
+              "duration": 166292800
             },
             "hidden": true,
             "match": {
@@ -1087,7 +1087,7 @@
       {
         "id": ";deleting-an-account-//tabortkonto",
         "keyword": "Scenario",
-        "line": 72,
+        "line": 70,
         "name": "Deleting an Account //tabortkonto",
         "steps": [
           {
@@ -1096,7 +1096,7 @@
             "name": "That there is a bank application browser",
             "result": {
               "status": "passed",
-              "duration": 96801
+              "duration": 90600
             },
             "line": 5,
             "match": {
@@ -1109,7 +1109,7 @@
             "name": "I have a account as a client",
             "result": {
               "status": "passed",
-              "duration": 56200
+              "duration": 54499
             },
             "line": 6,
             "match": {
@@ -1122,7 +1122,7 @@
             "name": "I log in with my informations",
             "result": {
               "status": "passed",
-              "duration": 7291736200
+              "duration": 7452988400
             },
             "line": 7,
             "match": {
@@ -1135,9 +1135,9 @@
             "name": "am on Myaccounts page",
             "result": {
               "status": "passed",
-              "duration": 1684387699
+              "duration": 1976815401
             },
-            "line": 73,
+            "line": 71,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:501"
             }
@@ -1148,9 +1148,9 @@
             "name": "click on Tabort Konto on the side of my mynewaccount2 account",
             "result": {
               "status": "passed",
-              "duration": 2015373301
+              "duration": 2034182199
             },
-            "line": 74,
+            "line": 72,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:512"
             }
@@ -1161,9 +1161,9 @@
             "name": "I should be able to see that the account has been deleted",
             "result": {
               "status": "passed",
-              "duration": 6460989201
+              "duration": 7031756100
             },
-            "line": 75,
+            "line": 73,
             "match": {
               "location": "folder\\Bank-master\\step-definitions\\SwedenBank.js:524"
             }
@@ -1173,7 +1173,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 130765701
+              "duration": 177749000
             },
             "hidden": true,
             "match": {
